@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mainNav = document.getElementById('mainNav');
-    
+
     if (mobileMenuBtn && mainNav) {
         mobileMenuBtn.addEventListener('click', () => {
             mainNav.classList.toggle('active');
@@ -36,19 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const docCards = document.querySelectorAll('.doc-card');
     const noDocsMessage = document.getElementById('noDocsMessage');
-    
+
     let activeCategory = 'all';
     let searchQuery = '';
 
     function filterDocuments() {
         let visibleCount = 0;
-        
+
         docCards.forEach(card => {
             const title = card.querySelector('.doc-title').textContent.toLowerCase();
             const category = card.dataset.category;
             const matchesSearch = title.includes(searchQuery);
             const matchesCategory = activeCategory === 'all' || category === activeCategory;
-            
+
             if (matchesSearch && matchesCategory) {
                 card.style.display = 'flex';
                 visibleCount++;
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Scroll to Top Button
     const scrollTopBtn = document.getElementById('scrollTopBtn');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 400) {
             scrollTopBtn.classList.add('visible');
@@ -106,12 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('btnFormSubmit');
 
     // Google Apps Script Web App URL (Insert your URL here after deploying)
-    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/a/macros/ashianasociety.com/s/AKfycbx0CLmuVJUr68eh2_QepBhModUuFXFx2TiMFxcJBL9e3EI3byU3JDBRe06DeYCNTH4R/exec';
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const name = document.getElementById('formName').value;
             const flat = document.getElementById('formFlat').value;
             const email = document.getElementById('formEmail').value;
@@ -148,14 +148,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: JSON.stringify(formData)
                 })
-                .then(() => {
-                    handleSuccess(name, flat);
-                })
-                .catch(error => {
-                    console.error('Error submitting form:', error);
-                    // Fallback to local success if network issues but we saved it locally
-                    handleSuccess(name, flat);
-                });
+                    .then(() => {
+                        handleSuccess(name, flat);
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                        // Fallback to local success if network issues but we saved it locally
+                        handleSuccess(name, flat);
+                    });
             } else {
                 // Fallback demonstration if URL is not configured yet
                 setTimeout(() => {
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (successAlert) {
             successAlert.textContent = `Thank you, Mr./Ms. ${name}. Your response regarding Flat ${flat} has been recorded successfully.`;
             successAlert.style.display = 'block';
-            
+
             setTimeout(() => {
                 successAlert.style.display = 'none';
             }, 5000);
