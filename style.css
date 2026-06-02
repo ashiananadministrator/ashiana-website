@@ -712,30 +712,31 @@ footer {
     text-align: right;
 }
 
-.footer-counter {
+.header-counter {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.9rem;
-    color: #94A3B8;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    background-color: rgba(15, 23, 42, 0.05);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
     transition: var(--transition);
 }
 
-.footer-counter:hover {
+.header-counter:hover {
     border-color: var(--accent);
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(15, 23, 42, 0.08);
 }
 
-.footer-counter i {
+.header-counter i {
     color: var(--accent);
 }
 
-.footer-counter strong {
-    color: #FFFFFF;
+.header-counter strong {
+    color: var(--primary);
     font-weight: 700;
 }
 
