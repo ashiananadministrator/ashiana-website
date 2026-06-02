@@ -141,4 +141,28 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.reset();
         });
     }
+
+    // 5. Visitor Counter Logic (using CounterAPI.dev)
+    const visitorCountValue = document.getElementById('visitorCountValue');
+    if (visitorCountValue) {
+        fetch('https://api.counterapi.dev/v1/ashianasociety/visits/up')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data && typeof data.count !== 'undefined') {
+                    // Format the number with commas (e.g. 1,234)
+                    visitorCountValue.textContent = Number(data.count).toLocaleString();
+                } else {
+                    visitorCountValue.textContent = '1';
+                }
+            })
+            .catch(error => {
+                console.error('Error updating visitor count:', error);
+                visitorCountValue.textContent = '--';
+            });
+    }
 });

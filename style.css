@@ -712,6 +712,33 @@ footer {
     text-align: right;
 }
 
+.footer-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #94A3B8;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.footer-counter:hover {
+    border-color: var(--accent);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.footer-counter i {
+    color: var(--accent);
+}
+
+.footer-counter strong {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
 /* Scroll to Top Button */
 .scroll-top {
     position: fixed;
