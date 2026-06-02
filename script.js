@@ -1,10 +1,8 @@
 // Ashiana CHS Redevelopment Portal - Interactive Scripts
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mainNav = document.getElementById('mainNav');
-
     if (mobileMenuBtn && mainNav) {
         mobileMenuBtn.addEventListener('click', () => {
             mainNav.classList.toggle('active');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
     // Close menu when clicking navigation links on mobile
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
@@ -30,25 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // 2. Document Search & Filter Logic
     const searchInput = document.getElementById('docSearch');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const docCards = document.querySelectorAll('.doc-card');
     const noDocsMessage = document.getElementById('noDocsMessage');
-
     let activeCategory = 'all';
     let searchQuery = '';
-
     function filterDocuments() {
         let visibleCount = 0;
-
         docCards.forEach(card => {
             const title = card.querySelector('.doc-title').textContent.toLowerCase();
             const category = card.dataset.category;
             const matchesSearch = title.includes(searchQuery);
             const matchesCategory = activeCategory === 'all' || category === activeCategory;
-
             if (matchesSearch && matchesCategory) {
                 card.style.display = 'flex';
                 visibleCount++;
@@ -56,21 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.style.display = 'none';
             }
         });
-
         if (visibleCount === 0) {
             if (noDocsMessage) noDocsMessage.style.display = 'block';
         } else {
             if (noDocsMessage) noDocsMessage.style.display = 'none';
         }
     }
-
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             searchQuery = e.target.value.toLowerCase().trim();
             filterDocuments();
         });
     }
-
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
@@ -79,10 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             filterDocuments();
         });
     });
-
     // 3. Scroll to Top Button
     const scrollTopBtn = document.getElementById('scrollTopBtn');
-
     window.addEventListener('scroll', () => {
         if (window.scrollY > 400) {
             scrollTopBtn.classList.add('visible');
@@ -90,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTopBtn.classList.remove('visible');
         }
     });
-
     if (scrollTopBtn) {
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({
@@ -99,31 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
     // 4. Contact Form Submission
     const contactForm = document.getElementById('redevContactForm');
     const successAlert = document.getElementById('formSuccessAlert');
     const submitBtn = document.getElementById('btnFormSubmit');
-
     // Google Apps Script Web App URL (Insert your URL here after deploying)
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/a/macros/ashianasociety.com/s/AKfycbx0CLmuVJUr68eh2_QepBhModUuFXFx2TiMFxcJBL9e3EI3byU3JDBRe06DeYCNTH4R/exec';
-
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
             const name = document.getElementById('formName').value;
             const flat = document.getElementById('formFlat').value;
             const email = document.getElementById('formEmail').value;
             const type = document.getElementById('formType').value;
             const message = document.getElementById('formMessage').value;
-
             // Change button state to loading
             if (submitBtn) {
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
             }
-
             const formData = {
                 name,
                 flat,
@@ -132,13 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 message,
                 timestamp: new Date().toLocaleString()
             };
-
             // Save submission to local storage as backup
             let submissions = JSON.parse(localStorage.getItem('ashiana_submissions') || '[]');
             submissions.push(formData);
             localStorage.setItem('ashiana_submissions', JSON.stringify(submissions));
-
-            if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+            if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycby-v7V5_Q3isukBhbabvU3Wdq6THl3yK8EDyTi80WzhyeGfxgE7iFdTlyKmTh6OqpJ0/exec') {
                 // Submit to Google Sheets and Email Apps Script
                 fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -161,12 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
     function handleSuccess(name, flat) {
         if (successAlert) {
             successAlert.textContent = `Thank you, Mr./Ms. ${name}. Your response regarding Flat ${flat} has been recorded successfully.`;
             successAlert.style.display = 'block';
-
             setTimeout(() => {
                 successAlert.style.display = 'none';
             }, 5000);
@@ -179,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.reset();
         }
     }
-
     // 5. Visitor Counter Logic (using CounterAPI.dev)
     const visitorCountValue = document.getElementById('visitorCountValue');
     if (visitorCountValue) {
