@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Best Practices -->
+    <title>Ashiana Society Redevelopment Portal | Vashi, Navi Mumbai</title>
+    <meta name="description" content="Official redevelopment transparency portal for Ashiana Co-operative Housing Society Limited, Sector 5, Airoli, Navi Mumbai. Access SGM notices, resolutions, PMC documents, and annexures.">
+    <meta name="author" content="Ashiana CHS Management Committee">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome Icons for modern aesthetic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Header Navigation Section -->
+    <header id="headerSection">
+        <div class="nav-container">
+            <a href="#" class="logo" id="logoLink">
+                <span class="logo-main">ASHIANA</span>
+                <span class="logo-sub">Redevelopment Portal</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#heroSection" id="navHome">Home</a></li>
+                    <li><a href="#portalSection" id="navPortal">Document Portal</a></li>
+                    <li><a href="#aboutRedev" id="navAbout">Redevelopment Info</a></li>
+                    <li><a href="#contactSection" id="navContact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="heroSection">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tag" id="redevStatusBadge">Status: In Progress</span>
+                <h1 id="mainHeroTitle">Ashiana Co-operative Housing Society Limited</h1>
+                <div class="hero-address" id="heroAddressContainer">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Sector 5, Airoli, Navi Mumbai - 400708</span>
+                </div>
+                <p class="hero-address" style="font-size: 1rem; color: #cbd5e1; margin-bottom: 2rem;">
+                    Welcome to the official transparency portal for Ashiana CHS. This website is established to keep all members fully informed with legal notifications, PMC updates, notices, resolutions, and structural annexures during our society's redevelopment process.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portalSection" class="btn btn-primary" id="heroDocumentsBtn">
+                        <i class="fas fa-file-pdf"></i> View Documents
+                    </a>
+                    <a href="#contactSection" class="btn btn-secondary" id="heroContactBtn">
+                        <i class="fas fa-envelope"></i> Contact Committee
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-card" id="quickStatsCard">
+                    <h3>Quick Project Info</h3>
+                    <div class="hero-stat-row">
+                        <span class="hero-stat-label">Authority</span>
+                        <span class="hero-stat-val">NMMC / CIDCO</span>
+                    </div>
+                    <div class="hero-stat-row">
+                        <span class="hero-stat-label">PMC Status</span>
+                        <span class="hero-stat-val">Appointed</span>
+                    </div>
+                    <div class="hero-stat-row">
+                        <span class="hero-stat-label">Latest SGM</span>
+                        <span class="hero-stat-val">2nd SGM Done</span>
+                    </div>
+                    <div class="hero-stat-row" style="border: none;">
+                        <span class="hero-stat-label">Location</span>
+                        <span class="hero-stat-val">Airoli, Sector 5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Portal Section -->
+    <main class="container" id="portalSection">
+        <div class="section-header">
+            <h2>Transparency Document Portal</h2>
+            <p>Access and download all official society notices, resolutions, and PMC reports chronologically listed for maximum transparency.</p>
+        </div>
+
+        <!-- Portal Controls (Search and Category Filters) -->
+        <div class="portal-controls" id="portalControlsContainer">
+            <div class="search-box" id="searchBoxContainer">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="docSearch" placeholder="Search documents by name (e.g. SGM, resolution, NMMC)...">
+            </div>
+            <div class="filter-tags" id="filterButtonsContainer">
+                <button class="filter-btn active" data-filter="all" id="filterBtnAll">All Documents</button>
+                <button class="filter-btn" data-filter="resources" id="filterBtnResources">Resident Resources</button>
+                <button class="filter-btn" data-filter="annexures" id="filterBtnAnnexures">Annexures</button>
+            </div>
+        </div>
+
+        <!-- Documents Grid -->
+        <div class="doc-grid" id="documentsGrid">
+            
+            <!-- Resident Resources -->
+            <article class="doc-card category-resources" data-category="resources" id="docCardRegCert">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">Society Registration Certificate</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Society_Registration_Certificate.pdf" download class="btn-download" id="btnDownloadRegCert">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-resources" data-category="resources" id="docCardPmcLetter">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">PMC (Project Management Consultant) Appointment Letter</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/PMC_Appointment_Letter.pdf" download class="btn-download" id="btnDownloadPmcLetter">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-resources" data-category="resources" id="docCardSgm1Notice">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">1st SGM (Special General Body Meeting) Notice</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/1st_SGM_Notice.pdf" download class="btn-download" id="btnDownloadSgm1Notice">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-resources" data-category="resources" id="docCardSgm1Res">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">1st SGM Approved Resolutions</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/1st_SGM_Resolution.pdf" download class="btn-download" id="btnDownloadSgm1Res">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-resources" data-category="resources" id="docCardSgm2Notice">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">2nd SGM (Special General Body Meeting) Notice</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/2nd_SGM_Notice.pdf" download class="btn-download" id="btnDownloadSgm2Notice">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-resources" data-category="resources" id="docCardSgm2Res">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">2nd SGM Approved Resolutions</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/2nd_SGM_Resolution.pdf" download class="btn-download" id="btnDownloadSgm2Res">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-resources" data-category="resources" id="docCardFeasibility">
+                <span class="doc-category-tag">Resident Resources</span>
+                <h3 class="doc-title">Society Redevelopment Feasibility Report</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Feasibility_Report.pdf" download class="btn-download" id="btnDownloadFeasibility">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <!-- Annexures -->
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexA">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure A - Proposed Building Layout & Plans</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_A_Building_Layout.pdf" download class="btn-download" id="btnDownloadAnnexA">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexB">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure B - NMMC Statutory Clearance Notice</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_B_NMMC_Notice.pdf" download class="btn-download" id="btnDownloadAnnexB">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexC">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure C - Reply Submitted to NMMC Notice</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_C_Reply_To_NMMC.pdf" download class="btn-download" id="btnDownloadAnnexC">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexD">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure D - CIDCO Conversion NOC & Clearance</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_D_CIDCO_NOC.pdf" download class="btn-download" id="btnDownloadAnnexD">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexE">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure E - Official Appointment Letter to Developer</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_E_Appointment_Letter_Developer.pdf" download class="btn-download" id="btnDownloadAnnexE">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexF">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure F - Draft Redevelopment & Development Agreement</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_F_Development_Agreement.pdf" download class="btn-download" id="btnDownloadAnnexF">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexG">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure G - Detail of Existing Society Members & Flats</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_G_Existing_Members_Flats.pdf" download class="btn-download" id="btnDownloadAnnexG">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexH">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure H - Proposed New Area Allocation Layout</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_H_New_Area_Allocation.pdf" download class="btn-download" id="btnDownloadAnnexH">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexI">
+                <span class="doc-category-tag">Annexures</span>
+                <h3 class="doc-title">Annexure I - Proposed Building Amenities Specification</h3>
+                <div class="doc-meta">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> PDF File</span>
+                    <a href="documents/Annexure_I_Proposed_Amenities.pdf" download class="btn-download" id="btnDownloadAnnexI">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </article>
+
+            <!-- Dynamic Search Fallback (Hidden by default) -->
+            <div class="no-docs-message" id="noDocsMessage" style="display: none;">
+                <i class="fas fa-search-minus" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; display: block;"></i>
+                <h4>No Matching Documents Found</h4>
+                <p>Try searching for other terms like 'SGM', 'Notice', 'NMMC' or 'Annexure'.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Info/About Section -->
+    <section class="contact-section" id="aboutRedev" style="background-color: var(--bg-main); padding: 5rem 2rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container" style="padding: 0;">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; font-family: var(--font-heading); color: var(--primary);">Transparency in Redevelopment</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
+                    In accordance with section 79A guidelines of the Maharashtra Co-operative Societies Act, our society management is dedicated to upholding the highest levels of transparency and democracy in our redevelopment process. Every decision, resolution, financial feasibility report, and clearance is posted publically for all society members and tenants to verify.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem;">
+                    <div style="text-align: center; max-width: 200px;">
+                        <i class="fas fa-balance-scale" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;">Legal Compliance</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Fully aligned with NMMC guidelines and CIDCO NOC protocols.</p>
+                    </div>
+                    <div style="text-align: center; max-width: 200px;">
+                        <i class="fas fa-users" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;">Member Consent</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">All major decisions backed by Special General Body resolutions.</p>
+                    </div>
+                    <div style="text-align: center; max-width: 200px;">
+                        <i class="fas fa-handshake" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;">Reputed PMC</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Professional PMCs appointed to safeguard the interests of all members.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section" id="contactSection">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Info Panel -->
+                <div class="contact-info-panel" id="contactInfoPanel">
+                    <h3>Get In Touch</h3>
+                    <p class="contact-desc">Have questions regarding the redevelopment process or documents? Reach out to the Ashiana CHS Management Committee directly using the information below or by submitting the contact form.</p>
+                    
+                    <div class="contact-item" id="contactItemAddress">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">Office Address</div>
+                            <div class="contact-val">Ashiana CHS, Sector 5, Airoli, Navi Mumbai - 400708</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="contactItemHours">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">Meeting Hours</div>
+                            <div class="contact-val">Sundays: 10:00 AM - 12:30 PM (Society Office)</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" id="contactItemEmail">
+                        <div class="contact-icon-wrapper">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">Email Address</div>
+                            <div class="contact-val"><a href="mailto:redevelopment@ashianachs.com">redevelopment@ashianachs.com</a></div>
+                        </div>
+                    </div>
+
+                    <div class="map-wrapper" id="googleMapPlaceholder">
+                        <!-- Standard embedded map showing Airoli Navi Mumbai -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.621211116666!2d72.9863897!3d19.1457636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13400000001%3A0xe9dbef4fb8f553a1!2sSector+5%2C+Airoli%2C+Navi+Mumbai%2C+Maharashtra+400708!5e0!3m2!1sen!2sin!4v1780412497283" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ashiana Society Location Map"
+                            id="locationMapIframe">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form Panel -->
+                <div class="contact-form-panel" id="contactFormPanel">
+                    <h3>Submit Query / Consent</h3>
+                    <p>Members can submit their inquiries or redevelopment suggestions below.</p>
+                    
+                    <form id="redevContactForm">
+                        <div class="form-group">
+                            <label for="formName">Full Name</label>
+                            <input type="text" id="formName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formFlat">Flat Number</label>
+                            <input type="text" id="formFlat" class="form-control" placeholder="e.g. A-302" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Email Address</label>
+                            <input type="email" id="formEmail" class="form-control" placeholder="e.g. ramesh@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Your Message / Query</label>
+                            <textarea id="formMessage" class="form-control" placeholder="Write your questions, feedback or queries regarding the documents here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="btnFormSubmit">
+                            <i class="fas fa-paper-plane"></i> Submit Request
+                        </button>
+                        
+                        <div class="alert-box alert-success" id="formSuccessAlert">
+                            Thank you! Your query has been submitted.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footerSection">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="footer-logo-main">ASHIANA CO-OPERATIVE HOUSING SOCIETY LTD</span>
+                <span style="font-size: 0.8rem; margin-top: 4px;">Registration No. MUM/WP/CHS/12345/2026</span>
+            </div>
+            <div class="footer-disclaimer">
+                <p>&copy; 2026 Ashiana Co-operative Housing Society Limited. All rights reserved.</p>
+                <p style="font-size: 0.75rem; color: #64748b; margin-top: 8px;">Disclaimer: This website is for informational and transparency purposes strictly intended for the members of Ashiana CHS, Sector 5, Airoli. Documents uploaded here are draft copies subject to general body consensus and statutory approval.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
