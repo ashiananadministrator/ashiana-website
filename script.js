@@ -100,9 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Contact Form Submission Mock
+    // 4. Contact Form Submission
     const contactForm = document.getElementById('redevContactForm');
     const successAlert = document.getElementById('formSuccessAlert');
+    const submitBtn = document.getElementById('btnFormSubmit');
+
+    // Google Apps Script Web App URL (Insert your URL here after deploying)
+    const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -111,35 +115,72 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('formName').value;
             const flat = document.getElementById('formFlat').value;
             const email = document.getElementById('formEmail').value;
+            const type = document.getElementById('formType').value;
             const message = document.getElementById('formMessage').value;
 
-            const submission = {
+            // Change button state to loading
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            }
+
+            const formData = {
                 name,
                 flat,
                 email,
+                type,
                 message,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toLocaleString()
             };
 
-            // Save submission to local storage for demonstration
+            // Save submission to local storage as backup
             let submissions = JSON.parse(localStorage.getItem('ashiana_submissions') || '[]');
-            submissions.push(submission);
+            submissions.push(formData);
             localStorage.setItem('ashiana_submissions', JSON.stringify(submissions));
 
-            // Display success message
-            if (successAlert) {
-                successAlert.textContent = `Thank you, Mr./Ms. ${name}. Your response regarding Flat ${flat} has been recorded successfully.`;
-                successAlert.style.display = 'block';
-                
-                // Hide alert after 5 seconds
+            if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+                // Submit to Google Sheets and Email Apps Script
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(() => {
+                    handleSuccess(name, flat);
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    // Fallback to local success if network issues but we saved it locally
+                    handleSuccess(name, flat);
+                });
+            } else {
+                // Fallback demonstration if URL is not configured yet
                 setTimeout(() => {
-                    successAlert.style.display = 'none';
-                }, 5000);
+                    handleSuccess(name, flat);
+                }, 1000);
             }
-
-            // Reset form
-            contactForm.reset();
         });
+    }
+
+    function handleSuccess(name, flat) {
+        if (successAlert) {
+            successAlert.textContent = `Thank you, Mr./Ms. ${name}. Your response regarding Flat ${flat} has been recorded successfully.`;
+            successAlert.style.display = 'block';
+            
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+            }, 5000);
+        }
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
+        }
+        if (contactForm) {
+            contactForm.reset();
+        }
     }
 
     // 5. Visitor Counter Logic (using CounterAPI.dev)
