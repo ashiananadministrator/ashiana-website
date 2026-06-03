@@ -807,7 +807,12 @@ footer {
         gap: 3rem;
     }
     .hero-image-container {
-        display: none; /* Hide card on medium size to fit content nicely, or wrap */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
     .contact-grid {
         grid-template-columns: 1fr;
@@ -828,7 +833,19 @@ footer {
         position: relative;
     }
     .nav-container {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
+    }
+    .logo-main {
+        font-size: 1.25rem;
+    }
+    .logo-sub {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+    }
+    .header-counter {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.78rem;
+        gap: 0.3rem;
     }
     nav {
         display: none;
@@ -853,25 +870,46 @@ footer {
         display: block;
     }
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
     .hero {
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
     }
     .container {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem;
     }
     .portal-controls {
         flex-direction: column;
         align-items: stretch;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .search-box {
+        min-width: 100%;
     }
     .filter-tags {
         justify-content: flex-start;
+        gap: 0.4rem;
+    }
+    .filter-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
     }
     .doc-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    .doc-card {
+        padding: 1.5rem;
     }
     .contact-form-panel {
         padding: 1.5rem;
+    }
+    .scroll-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 38px;
+        height: 38px;
     }
 }
