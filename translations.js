@@ -124,7 +124,10 @@ const portalTranslations = {
         member_7_name: "Shri. Rajesh Ashok Samant",
         member_8_name: "Shri. Dinesh Laxman Darvesh",
         member_9_name: "Smt. Suvarna Dasharath Dalvi",
-        member_10_name: "Smt. Sunita Rajendra Joshi"
+        member_10_name: "Smt. Sunita Rajendra Joshi",
+        office_label: "SOCIETY OFFICE",
+        office_address: "Ashiana Co-operative Housing Society LTD, Sector 5, Airoli, Navi Mumbai",
+        office_desc: "For any concerns regarding the redevelopment process, please contact the committee or use the contact form below."
     },
     hi: {
         meta_title: "आशियाना सोसाइटी पुनर्विकास पोर्टल | ऐरोली, नवी मुंबई",
@@ -251,7 +254,10 @@ const portalTranslations = {
         member_7_name: "श्री. राजेश अशोक सामंत",
         member_8_name: "श्री. दिनेश लक्ष्मण दरवेश",
         member_9_name: "श्रीमती. सुवर्णा दशरथ दळवी",
-        member_10_name: "श्रीमती. सुनीता राजेंद्र जोशी"
+        member_10_name: "श्रीमती. सुनीता राजेंद्र जोशी",
+        office_label: "सोसायटी कार्यालय",
+        office_address: "आशियाना को-ऑपरेटिव हाउसिंग सोसाइटी लिमिटेड, सेक्टर 5, ऐरोली, नवी मुंबई",
+        office_desc: "पुनर्विकास प्रक्रिया के संबंध में किसी भी चिंता के लिए, कृपया समिति से संपर्क करें या नीचे दिए गए संपर्क फॉर्म का उपयोग करें।"
     },
     mr: {
         meta_title: "आशियाना सोसायटी पुनर्विकास पोर्टल | ऐरोली, नवी मुंबई",
@@ -378,7 +384,10 @@ const portalTranslations = {
         member_7_name: "श्री. राजेश अशोक सामंत",
         member_8_name: "श्री. दिनेश लक्ष्मण दरवेश",
         member_9_name: "श्रीमती. सुवर्णा दशरथ दळवी",
-        member_10_name: "श्रीमती. सुनीता राजेंद्र जोशी"
+        member_10_name: "श्रीमती. सुनीता राजेंद्र जोशी",
+        office_label: "सोसायटी कार्यालय",
+        office_address: "आशियाना को-ऑपरेटिव्ह्ह सोसायटी लिमिटेड, सेक्टर ५, ऐरोली, नवी मुंबई",
+        office_desc: "पुनर्विकास प्रक्रियेबाबत काही शंका असल्यास, कृपया समितीशी संपर्क साधा किंवा खालील संपर्क फॉर्मचा वापर करा।"
     }
 };
 window.portalTranslations = portalTranslations;
