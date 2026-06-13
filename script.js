@@ -1,6 +1,61 @@
 // Ashiana CHS Redevelopment Portal - Interactive Scripts
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
+    // 1. Language Translation Logic
+    let currentLang = localStorage.getItem('ashiana_lang') || 'en';
+
+    function applyLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('ashiana_lang', lang);
+        
+        // Update document lang attribute
+        document.documentElement.lang = lang;
+
+        // Sync language selector value
+        const langSelector = document.getElementById('langSelector');
+        if (langSelector) {
+            langSelector.value = lang;
+        }
+
+        // Translate elements with data-i18n attribute
+        const i18nElements = document.querySelectorAll('[data-i18n]');
+        i18nElements.forEach(el => {
+            const key = el.dataset.i18n;
+            if (window.portalTranslations && window.portalTranslations[lang] && window.portalTranslations[lang][key]) {
+                el.textContent = window.portalTranslations[lang][key];
+            }
+        });
+
+        // Translate inputs/textareas with data-i18n-placeholder attribute
+        const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+        placeholderElements.forEach(el => {
+            const key = el.dataset.i18nPlaceholder;
+            if (window.portalTranslations && window.portalTranslations[lang] && window.portalTranslations[lang][key]) {
+                el.placeholder = window.portalTranslations[lang][key];
+            }
+        });
+
+        // Update document title and description meta tag
+        if (window.portalTranslations && window.portalTranslations[lang]) {
+            document.title = window.portalTranslations[lang].meta_title || document.title;
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && window.portalTranslations[lang].meta_desc) {
+                metaDesc.setAttribute('content', window.portalTranslations[lang].meta_desc);
+            }
+        }
+
+        // Re-run search/filter in case of language changes affecting titles
+        filterDocuments();
+    }
+
+    // Bind language selector event listener
+    const langSelectElement = document.getElementById('langSelector');
+    if (langSelectElement) {
+        langSelectElement.addEventListener('change', (e) => {
+            applyLanguage(e.target.value);
+        });
+    }
+
+    // 2. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mainNav = document.getElementById('mainNav');
     if (mobileMenuBtn && mainNav) {
@@ -27,20 +82,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    // 2. Document Search & Filter Logic
+
+    // 3. Document Search & Filter Logic
     const searchInput = document.getElementById('docSearch');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const docCards = document.querySelectorAll('.doc-card');
     const noDocsMessage = document.getElementById('noDocsMessage');
     let activeCategory = 'all';
     let searchQuery = '';
+
     function filterDocuments() {
         let visibleCount = 0;
         docCards.forEach(card => {
             const title = card.querySelector('.doc-title').textContent.toLowerCase();
+            const originalTitle = card.dataset.titleEn ? card.dataset.titleEn.toLowerCase() : '';
             const category = card.dataset.category;
-            const matchesSearch = title.includes(searchQuery);
+            const matchesSearch = title.includes(searchQuery) || originalTitle.includes(searchQuery);
             const matchesCategory = activeCategory === 'all' || category === activeCategory;
+            
             if (matchesSearch && matchesCategory) {
                 card.style.display = 'flex';
                 visibleCount++;
@@ -54,12 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (noDocsMessage) noDocsMessage.style.display = 'none';
         }
     }
+
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             searchQuery = e.target.value.toLowerCase().trim();
             filterDocuments();
         });
     }
+
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
@@ -68,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             filterDocuments();
         });
     });
-    // 3. Scroll to Top Button
+
+    // 4. Scroll to Top Button
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 400) {
@@ -85,12 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    // 4. Contact Form Submission
+
+    // 5. Contact Form Submission
     const contactForm = document.getElementById('redevContactForm');
     const successAlert = document.getElementById('formSuccessAlert');
     const submitBtn = document.getElementById('btnFormSubmit');
-    // Google Apps Script Web App URL (Insert your URL here after deploying)
+    // Google Apps Script Web App URL
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/a/macros/ashianasociety.com/s/AKfycbx0CLmuVJUr68eh2_QepBhModUuFXFx2TiMFxcJBL9e3EI3byU3JDBRe06DeYCNTH4R/exec';
+
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -99,11 +163,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('formEmail').value;
             const type = document.getElementById('formType').value;
             const message = document.getElementById('formMessage').value;
-            // Change button state to loading
+
+            // Change button state to loading (localized)
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                const loadingText = (window.portalTranslations && window.portalTranslations[currentLang]) 
+                    ? window.portalTranslations[currentLang].form_submit_loading 
+                    : 'Submitting...';
+                submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${loadingText}`;
             }
+
             const formData = {
                 name,
                 flat,
@@ -112,10 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 message,
                 timestamp: new Date().toLocaleString()
             };
+
             // Save submission to local storage as backup
             let submissions = JSON.parse(localStorage.getItem('ashiana_submissions') || '[]');
             submissions.push(formData);
             localStorage.setItem('ashiana_submissions', JSON.stringify(submissions));
+
             if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycby-v7V5_Q3isukBhbabvU3Wdq6THl3yK8EDyTi80WzhyeGfxgE7iFdTlyKmTh6OqpJ0/exec') {
                 // Submit to Google Sheets and Email Apps Script
                 fetch(GOOGLE_SCRIPT_URL, {
@@ -139,23 +210,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
     function handleSuccess(name, flat) {
         if (successAlert) {
-            successAlert.textContent = `Thank you, Mr./Ms. ${name}. Your response regarding Flat ${flat} has been recorded successfully.`;
+            let successText = `Thank you, Mr./Ms. ${name}. Your response regarding Flat ${flat} has been recorded successfully.`;
+            if (window.portalTranslations && window.portalTranslations[currentLang] && window.portalTranslations[currentLang].form_success_template) {
+                successText = window.portalTranslations[currentLang].form_success_template
+                    .replace('{name}', name)
+                    .replace('{flat}', flat);
+            }
+            successAlert.textContent = successText;
             successAlert.style.display = 'block';
             setTimeout(() => {
                 successAlert.style.display = 'none';
-            }, 5000);
+            }, 6000);
         }
         if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
+            const submitText = (window.portalTranslations && window.portalTranslations[currentLang])
+                ? window.portalTranslations[currentLang].btn_submit_request
+                : 'Submit Request';
+            submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> ${submitText}`;
         }
         if (contactForm) {
             contactForm.reset();
         }
     }
-    // 5. Visitor Counter Logic (using CounterAPI.dev)
+
+    // 6. Visitor Counter Logic (using CounterAPI.dev)
     const visitorCountValue = document.getElementById('visitorCountValue');
     if (visitorCountValue) {
         fetch('https://api.counterapi.dev/v1/ashianasociety/visits/up')
@@ -178,4 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 visitorCountValue.textContent = '--';
             });
     }
+
+    // Initialize Active Language
+    applyLanguage(currentLang);
 });

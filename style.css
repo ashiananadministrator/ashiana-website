@@ -136,6 +136,69 @@ nav a:hover::after {
     width: 100%;
 }
 
+.lang-selector-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    background-color: rgba(15, 23, 42, 0.05);
+    padding: 0.35rem 1.75rem 0.35rem 0.75rem; /* Extra right padding for caret icon */
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    cursor: pointer;
+}
+
+.lang-selector-container:hover {
+    border-color: var(--accent);
+    background-color: rgba(15, 23, 42, 0.08);
+}
+
+.lang-selector-container i {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.lang-selector-container select {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.lang-selector-container::after {
+    content: '\f0d7'; /* caret-down icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    font-size: 0.75rem;
+}
+
+.lang-selector-container:hover::after {
+    color: var(--accent);
+}
+
+.lang-selector-container select option {
+    background-color: #FFFFFF;
+    color: var(--text-main);
+    padding: 0.5rem;
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
