@@ -127,7 +127,10 @@ const portalTranslations = {
         member_10_name: "Smt. Sunita Rajendra Joshi",
         office_label: "SOCIETY OFFICE",
         office_address: "Ashiana Co-operative Housing Society LTD, Sector 5, Airoli, Navi Mumbai",
-        office_desc: "For any concerns regarding the redevelopment process, please contact the committee or send email to committe@ashianasociety.com"
+        office_desc: "For any concerns regarding the redevelopment process, please contact the committee or send email to committe@ashianasociety.com",
+        status_available: "Available",
+        status_not_available: "Not Uploaded",
+        alert_not_uploaded: "This document is not uploaded yet. The management committee will upload it soon."
     },
     hi: {
         meta_title: "आशियाना सोसाइटी पुनर्विकास पोर्टल | ऐरोली, नवी मुंबई",
@@ -257,7 +260,10 @@ const portalTranslations = {
         member_10_name: "श्रीमती. सुनीता राजेंद्र जोशी",
         office_label: "सोसायटी कार्यालय",
         office_address: "आशियाना को-ऑपरेटिव हाउसिंग सोसाइटी लिमिटेड, सेक्टर 5, ऐरोली, नवी मुंबई",
-        office_desc: "पुनर्विकास प्रक्रिया के संबंध में किसी भी चिंता के लिए, कृपया समिति से संपर्क करें या committe@ashianasociety.com पर ईमेल भेजें।"
+        office_desc: "पुनर्विकास प्रक्रिया के संबंध में किसी भी चिंता के लिए, कृपया समिति से संपर्क करें या committe@ashianasociety.com पर ईमेल भेजें।",
+        status_available: "उपलब्ध",
+        status_not_available: "अपलोड नहीं किया गया",
+        alert_not_uploaded: "यह दस्तावेज़ अभी अपलोड नहीं किया गया है। प्रबंधन समिति इसे जल्द ही अपलोड करेगी।"
     },
     mr: {
         meta_title: "आशियाना सोसायटी पुनर्विकास पोर्टल | ऐरोली, नवी मुंबई",
@@ -387,7 +393,10 @@ const portalTranslations = {
         member_10_name: "श्रीमती. सुनीता राजेंद्र जोशी",
         office_label: "सोसायटी कार्यालय",
         office_address: "आशियाना को-ऑपरेटिव्ह्ह सोसायटी लिमिटेड, सेक्टर ५, ऐरोली, नवी मुंबई",
-        office_desc: "पुनर्विकास प्रक्रियेबाबत काही शंका असल्यास, कृपया समितीशी संपर्क साधा किंवा committe@ashianasociety.com वर ईमेल पाठवा।"
+        office_desc: "पुनर्विकास प्रक्रियेबाबत काही शंका असल्यास, कृपया समितीशी संपर्क साधा किंवा committe@ashianasociety.com वर ईमेल पाठवा।",
+        status_available: "उपलब्ध",
+        status_not_available: "अपलोड केले नाही",
+        alert_not_uploaded: "हे दस्तऐवज अद्याप अपलोड केलेले नाही. व्यवस्थापन समिती ते लवकरच अपलोड करेल।"
     }
 };
 window.portalTranslations = portalTranslations;

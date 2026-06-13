@@ -189,6 +189,92 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 8. Document Availability Check
+    const docCardsList = document.querySelectorAll('.doc-card');
+    docCardsList.forEach(card => {
+        const downloadBtn = card.querySelector('.btn-download');
+        if (!downloadBtn) return;
+        
+        const fileUrl = downloadBtn.getAttribute('href');
+        if (!fileUrl) return;
+
+        // Perform a quick fetch HEAD request or GET request to verify file existence
+        fetch(fileUrl, { method: 'HEAD' })
+            .then(res => {
+                if (res.ok) {
+                    markDocumentAvailable(card, downloadBtn);
+                } else {
+                    markDocumentNotAvailable(card, downloadBtn);
+                }
+            })
+            .catch(() => {
+                markDocumentNotAvailable(card, downloadBtn);
+            });
+    });
+
+    function markDocumentAvailable(card, btn) {
+        card.classList.add('uploaded');
+        card.classList.remove('missing');
+        
+        // Append status tag if not already present
+        if (!card.querySelector('.doc-status-tag')) {
+            const statusTag = document.createElement('span');
+            statusTag.className = 'doc-status-tag';
+            statusTag.setAttribute('data-i18n', 'status_available');
+            
+            // Translate immediately
+            const lang = localStorage.getItem('ashiana_lang') || 'en';
+            if (window.portalTranslations && window.portalTranslations[lang] && window.portalTranslations[lang]['status_available']) {
+                statusTag.textContent = window.portalTranslations[lang]['status_available'];
+            } else {
+                statusTag.textContent = 'Available';
+            }
+            
+            // Append right after the category tag
+            const catTag = card.querySelector('.doc-category-tag');
+            if (catTag) {
+                catTag.parentNode.insertBefore(statusTag, catTag.nextSibling);
+            }
+        }
+    }
+
+    function markDocumentNotAvailable(card, btn) {
+        card.classList.add('missing');
+        card.classList.remove('uploaded');
+        
+        // Append status tag if not already present
+        if (!card.querySelector('.doc-status-tag')) {
+            const statusTag = document.createElement('span');
+            statusTag.className = 'doc-status-tag';
+            statusTag.setAttribute('data-i18n', 'status_not_available');
+            
+            // Translate immediately
+            const lang = localStorage.getItem('ashiana_lang') || 'en';
+            if (window.portalTranslations && window.portalTranslations[lang] && window.portalTranslations[lang]['status_not_available']) {
+                statusTag.textContent = window.portalTranslations[lang]['status_not_available'];
+            } else {
+                statusTag.textContent = 'Not Uploaded';
+            }
+            
+            // Append right after the category tag
+            const catTag = card.querySelector('.doc-category-tag');
+            if (catTag) {
+                catTag.parentNode.insertBefore(statusTag, catTag.nextSibling);
+            }
+        }
+
+        // Disable link
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = localStorage.getItem('ashiana_lang') || 'en';
+            let msg = 'This document is not uploaded yet. The management committee will upload it soon.';
+            if (window.portalTranslations && window.portalTranslations[lang] && window.portalTranslations[lang]['alert_not_uploaded']) {
+                msg = window.portalTranslations[lang]['alert_not_uploaded'];
+            }
+            alert(msg);
+        });
+    }
+
     // Initialize Active Language
     applyLanguage(currentLang);
 });

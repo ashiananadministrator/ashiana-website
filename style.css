@@ -1466,3 +1466,69 @@ footer {
         padding: 1.25rem;
     }
 }
+
+/* ==========================================
+   Document Uploaded / Missing Status Styling
+   ========================================== */
+.doc-card {
+    border-left: 4px solid #cbd5e1; /* Default slate border */
+    transition: var(--transition);
+}
+
+.doc-card.uploaded {
+    border-left: 4px solid #10B981 !important; /* Vibrant Green */
+    background-color: #F0FDF4; /* Light green background */
+}
+
+.doc-card.missing {
+    border-left: 4px solid #EF4444 !important; /* Vibrant Red */
+    background-color: #FEF2F2; /* Light red background */
+}
+
+.doc-card.uploaded:hover {
+    border-color: #059669 !important;
+}
+
+.doc-card.missing:hover {
+    border-color: #DC2626 !important;
+}
+
+.doc-status-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.75rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+}
+
+.doc-card.uploaded .doc-status-tag {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.doc-card.missing .doc-status-tag {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+/* Adjust download buttons based on status */
+.doc-card.uploaded .btn-download {
+    background-color: #10B981;
+}
+
+.doc-card.uploaded .btn-download:hover {
+    background-color: #059669;
+}
+
+.doc-card.missing .btn-download {
+    background-color: #EF4444;
+}
+
+.doc-card.missing .btn-download:hover {
+    background-color: #DC2626;
+}
+
