@@ -179,6 +179,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    // 7. Auto-hide Tomorrow's AGM Notice banner after 14 June 2026 (midnight going into 15 June 2026)
+    const importantNotice = document.getElementById('importantNoticeSection');
+    if (importantNotice) {
+        const expiryDate = new Date('2026-06-15T00:00:00+05:30'); // Midnight of June 14, 2026 in local time (+05:30)
+        const currentDate = new Date();
+        if (currentDate >= expiryDate) {
+            importantNotice.style.display = 'none';
+        }
+    }
+
     // Initialize Active Language
     applyLanguage(currentLang);
 });
