@@ -10,11 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update document lang attribute
         document.documentElement.lang = lang;
 
-        // Sync language selector value
-        const langSelector = document.getElementById('langSelector');
-        if (langSelector) {
-            langSelector.value = lang;
-        }
+        // Sync language selector active classes
+        const langLinks = document.querySelectorAll('.lang-link');
+        langLinks.forEach(link => {
+            if (link.dataset.lang === lang) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
 
         // Translate elements with data-i18n attribute
         const i18nElements = document.querySelectorAll('[data-i18n]');
@@ -47,13 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
         filterDocuments();
     }
 
-    // Bind language selector event listener
-    const langSelectElement = document.getElementById('langSelector');
-    if (langSelectElement) {
-        langSelectElement.addEventListener('change', (e) => {
-            applyLanguage(e.target.value);
+    // Bind language selector event listeners
+    const langLinks = document.querySelectorAll('.lang-link');
+    langLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            applyLanguage(link.dataset.lang);
         });
-    }
+    });
 
     // 2. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');

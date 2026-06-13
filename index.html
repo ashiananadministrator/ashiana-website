@@ -29,7 +29,7 @@
             
             <div class="header-counter" id="visitorCounter">
                 <i class="fas fa-eye"></i>
-                <span><span data-i18n="visitors_label">Visitors:</span> <strong id="visitorCountValue">Loading...</strong></span>
+                <span><span data-i18n="visitors_label">Visitors:</span> <strong id="visitorCountValue" data-i18n="visitor_loading">Loading...</strong></span>
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
@@ -45,11 +45,13 @@
                     <li>
                         <div class="lang-selector-container">
                             <i class="fas fa-globe"></i>
-                            <select id="langSelector" aria-label="Select Language">
-                                <option value="en">English</option>
-                                <option value="hi">हिन्दी</option>
-                                <option value="mr">मराठी</option>
-                            </select>
+                            <div class="lang-selector-links" id="langSelectorLinks">
+                                <button class="lang-link active" data-lang="en">English</button>
+                                <span class="lang-separator">|</span>
+                                <button class="lang-link" data-lang="hi">हिंदी</button>
+                                <span class="lang-separator">|</span>
+                                <button class="lang-link" data-lang="mr">मराठी</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
