@@ -28,7 +28,7 @@ const portalTranslations = {
         stat_next_sgbm: "Next SGBM",
         stat_next_sgbm_val: "To Be Updated",
         stat_last_agm: "Last AGM",
-        stat_last_agm_val: "To Be Updated",
+        stat_last_agm_val: "14 September 2025",
         stat_next_agm: "Next AGM",
         stat_next_agm_val: "14 June 2026",
         stat_location: "Location",
@@ -101,7 +101,9 @@ const portalTranslations = {
         footer_disclaimer: "Disclaimer: This website is for informational and transparency purposes strictly intended for the members of Ashiana CHS, Sector 5, Airoli. Documents uploaded here are draft copies subject to general body consensus and statutory approval.",
         form_success_default: "Thank you! Your query has been submitted.",
         form_submit_loading: "Submitting...",
-        form_success_template: "Thank you, Mr./Ms. {name}. Your response regarding Flat {flat} has been recorded successfully."
+        form_success_template: "Thank you, Mr./Ms. {name}. Your response regarding Flat {flat} has been recorded successfully.",
+        important_notice_badge: "IMPORTANT NOTICE",
+        important_notice_text: "Tomorrow's Annual General Body Meeting (AGM) notice and annual report are now available for download. The 2nd AGM will be held on Sunday, 14 June 2026 at 3:30 P.M. at the Society Office. All members are requested to attend and download the AGM Notice & Annual Report."
     },
     hi: {
         meta_title: "आशियाना सोसाइटी पुनर्विकास पोर्टल | ऐरोली, नवी मुंबई",
@@ -132,7 +134,7 @@ const portalTranslations = {
         stat_next_sgbm: "अगली एसजीबीएम",
         stat_next_sgbm_val: "अपडेट किया जाएगा",
         stat_last_agm: "अंतिम एजीएम",
-        stat_last_agm_val: "अपडेट किया जाएगा",
+        stat_last_agm_val: "14 सितंबर 2025",
         stat_next_agm: "अगली एजीएम",
         stat_next_agm_val: "14 जून 2026",
         stat_location: "स्थान",
@@ -205,7 +207,9 @@ const portalTranslations = {
         footer_disclaimer: "अस्वीकरण: यह वेबसाइट सूचना और पारदर्शिता के उद्देश्यों के लिए है जो पूरी तरह से आशियाना सीएचएस, सेक्टर 5, ऐरोली के सदस्यों के लिए है। यहाँ अपलोड किए गए दस्तावेज़ मसौदा प्रतियां हैं जो आम सभा की आम सहमति और वैधानिक अनुमोदन के अधीन हैं।",
         form_success_default: "धन्यवाद! आपका प्रश्न जमा कर दिया गया है।",
         form_submit_loading: "जमा किया जा रहा है...",
-        form_success_template: "धन्यवाद, श्री/श्रीमती {name}। फ्लैट {flat} के संबंध में आपकी प्रतिक्रिया सफलतापूर्वक दर्ज की गई है।"
+        form_success_template: "धन्यवाद, श्री/श्रीमती {name}। फ्लैट {flat} के संबंध में आपकी प्रतिक्रिया सफलतापूर्वक दर्ज की गई है।",
+        important_notice_badge: "महत्वपूर्ण सूचना",
+        important_notice_text: "कल होने वाली वार्षिक आम बैठक (एजीएम) का नोटिस और वार्षिक रिपोर्ट अब डाउनलोड के लिए उपलब्ध है। द्वितीय एजीएम रविवार, 14 जून 2026 को दोपहर 3:30 बजे सोसाइटी कार्यालय में आयोजित की जाएगी। सभी सदस्यों से उपस्थित होने का अनुरोध है।"
     },
     mr: {
         meta_title: "आशियाना सोसायटी पुनर्विकास पोर्टल | ऐरोली, नवी मुंबई",
@@ -236,7 +240,7 @@ const portalTranslations = {
         stat_next_sgbm: "पुढील एसजीबीएम",
         stat_next_sgbm_val: "अद्ययावत केली जाईल",
         stat_last_agm: "शेवटची एजीएम",
-        stat_last_agm_val: "अद्ययावत केली जाईल",
+        stat_last_agm_val: "14 सप्टेंबर 2025",
         stat_next_agm: "पुढील एजीएम",
         stat_next_agm_val: "१४ जून २०२६",
         stat_location: "स्थान",
@@ -309,7 +313,9 @@ const portalTranslations = {
         footer_disclaimer: "अस्वीकरण: ही वेबसाइट केवळ माहिती आणि पारदर्शकतेच्या उद्देशांसाठी आहे जी पूर्णपणे आशियाना सीएचएस, सेक्टर ५, ऐरोलीच्या सदस्यांसाठी आहे. येथे अपलोड केलेले दस्तऐवज हे मसुदे आहेत जे आम सभेची सहमती आणि वैधानिक मंजुरीच्या अधीन आहेत.",
         form_success_default: "धन्यवाद! आपला प्रश्न सादर केला गेला आहे.",
         form_submit_loading: "सादर केले जात आहे...",
-        form_success_template: "धन्यवाद, श्री/श्रीमती {name}. फ्लॅट {flat} च्या संदर्भातील आपला प्रतिसाद यशस्वीरित्या नोंदवला गेला आहे."
+        form_success_template: "धन्यवाद, श्री/श्रीमती {name}. फ्लॅट {flat} च्या संदर्भातील आपला प्रतिसाद यशस्वीरित्या नोंदवला गेला आहे.",
+        important_notice_badge: "महत्त्वाची सूचना",
+        important_notice_text: "उद्या होणाऱ्या वार्षिक सर्वसाधारण सभेची (एजीएम) नोटीस आणि वार्षिक अहवाल आता डाउनलोडसाठी उपलब्ध आहे. २ री एजीएम रविवार, १४ जून २०२६ रोजी दुपारी ३:३० वाजता सोसायटी कार्यालयात आयोजित केली जाईल. सर्व सदस्यांना उपस्थित राहण्याची विनंती आहे।"
     }
 };
 window.portalTranslations = portalTranslations;
