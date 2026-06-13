@@ -197,6 +197,11 @@ nav a:hover::after {
     user-select: none;
 }
 
+/* Mobile language selector - hidden on desktop */
+.lang-selector-mobile {
+    display: none;
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -944,6 +949,13 @@ footer {
     }
     .mobile-menu-btn {
         display: block;
+    }
+    /* Show mobile lang selector, hide the one inside nav */
+    .lang-selector-mobile {
+        display: inline-flex;
+    }
+    nav .lang-selector-container {
+        display: none;
     }
     .hero h1 {
         font-size: 2rem;
