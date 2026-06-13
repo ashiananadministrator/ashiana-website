@@ -604,8 +604,10 @@ nav a:hover::after {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .contact-info-panel h3 {
