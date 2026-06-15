@@ -1532,3 +1532,325 @@ footer {
     background-color: #DC2626;
 }
 
+/* ==========================================
+   Redevelopment Progress Tracker Styling
+   ========================================== */
+.progress-section {
+    background-color: var(--bg-main, #F8FAFC);
+    padding: 5rem 2rem;
+    border-bottom: 1px solid var(--border-color, #E2E8F0);
+}
+
+.progress-timeline-container {
+    position: relative;
+    max-width: var(--max-width, 1200px);
+    margin: 3rem auto 0 auto;
+    padding: 0 1rem;
+}
+
+.progress-line {
+    position: absolute;
+    top: 25px;
+    left: 4rem;
+    right: 4rem;
+    height: 4px;
+    background-color: var(--border-color, #E2E8F0);
+    z-index: 1;
+}
+
+.progress-line-fill {
+    height: 100%;
+    background-color: #10B981; /* Completed green */
+    transition: width 0.5s ease;
+}
+
+.progress-steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.progress-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.progress-step .step-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 3px solid var(--border-color, #E2E8F0);
+    color: var(--text-muted, #64748B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15rem;
+    transition: var(--transition, all 0.3s ease);
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05));
+}
+
+.progress-step.completed .step-icon {
+    border-color: #10B981;
+    background-color: #E6FDF0;
+    color: #10B981;
+}
+
+.progress-step.active .step-icon {
+    border-color: var(--accent, #D97706);
+    background-color: #FEF3C7;
+    color: var(--accent, #D97706);
+    box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.2);
+    animation: activePulse 2s infinite;
+}
+
+.progress-step.pending .step-icon {
+    background-color: #FFFFFF;
+}
+
+.progress-step .step-content {
+    max-width: 180px;
+}
+
+.progress-step .step-status {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.progress-step.completed .step-status {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.progress-step.active .step-status {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.progress-step.pending .step-status {
+    background-color: #E2E8F0;
+    color: #475569;
+}
+
+.progress-step h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary, #0F172A);
+    margin-bottom: 0.35rem;
+}
+
+.progress-step p {
+    font-size: 0.78rem;
+    color: var(--text-muted, #64748B);
+    line-height: 1.4;
+}
+
+@keyframes activePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(217, 119, 6, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0);
+    }
+}
+
+/* ==========================================
+   Meeting History Timeline Section Styling
+   ========================================== */
+.meeting-history-section {
+    background-color: #FFFFFF;
+    padding: 5rem 2rem;
+    border-bottom: 1px solid var(--border-color, #E2E8F0);
+}
+
+.meeting-history-section .timeline {
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.meeting-history-section .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 2px;
+    background-color: var(--border-color, #E2E8F0);
+}
+
+.meeting-history-section .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.meeting-history-section .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.meeting-history-section .timeline-badge {
+    position: absolute;
+    left: -2.5rem;
+    top: 2px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    z-index: 10;
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05));
+    border: 2px solid #FFFFFF;
+}
+
+.meeting-history-section .agm-badge {
+    background-color: var(--primary, #0F172A);
+}
+
+.meeting-history-section .sgbm-badge {
+    background-color: var(--accent, #D97706);
+}
+
+.meeting-history-section .timeline-panel {
+    background-color: #FFFDF9;
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05));
+    transition: var(--transition, all 0.3s ease);
+}
+
+.meeting-history-section .timeline-panel:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+    border-color: var(--accent, #D97706);
+}
+
+.meeting-history-section .timeline-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary, #0F172A);
+    margin-bottom: 0.5rem;
+}
+
+.meeting-history-section .timeline-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: var(--text-muted, #64748B);
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-color, #E2E8F0);
+    padding-bottom: 0.75rem;
+}
+
+.meeting-history-section .timeline-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.meeting-history-section .timeline-meta i {
+    color: var(--accent, #D97706);
+}
+
+.meeting-history-section .meta-status.completed i {
+    color: #10B981;
+}
+
+.meeting-history-section .meta-status.recent i {
+    color: #3B82F6;
+}
+
+.meeting-history-section .timeline-body p {
+    color: var(--text-muted, #64748B);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Responsive fallbacks for new components
+   ========================================== */
+@media (max-width: 768px) {
+    /* Progress bar to vertical stack */
+    .progress-line {
+        display: none;
+    }
+    
+    .progress-steps {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+        padding-left: 2rem;
+        position: relative;
+    }
+    
+    .progress-steps::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 27px;
+        width: 3px;
+        background-color: var(--border-color, #E2E8F0);
+        z-index: 1;
+    }
+    
+    .progress-step {
+        flex-direction: row;
+        text-align: left;
+        gap: 1.5rem;
+        padding: 0;
+        z-index: 2;
+    }
+    
+    .progress-step .step-icon {
+        margin-bottom: 0;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .progress-step .step-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    /* Timeline adjustments */
+    .meeting-history-section .timeline {
+        padding-left: 2rem;
+    }
+    
+    .meeting-history-section .timeline-badge {
+        left: -2rem;
+        width: 28px;
+        height: 28px;
+        font-size: 0.6rem;
+    }
+    
+    .meeting-history-section .timeline::before {
+        left: 13px;
+    }
+}
+
+

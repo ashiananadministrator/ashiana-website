@@ -275,6 +275,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Update AGM dates dynamically based on current date
+    const agmCutoffDate = new Date('2026-06-15T00:00:00+05:30'); // Midnight of June 14, 2026 going into June 15, 2026 in local time (+05:30)
+    const currentDate = new Date();
+    if (currentDate >= agmCutoffDate) {
+        if (window.portalTranslations) {
+            // English
+            if (window.portalTranslations.en) {
+                window.portalTranslations.en.stat_last_agm_val = "14 June 2026";
+                window.portalTranslations.en.stat_next_agm_val = "To Be Updated";
+            }
+            // Hindi
+            if (window.portalTranslations.hi) {
+                window.portalTranslations.hi.stat_last_agm_val = "14 जून 2026";
+                window.portalTranslations.hi.stat_next_agm_val = "अपडेट किया जाएगा";
+            }
+            // Marathi
+            if (window.portalTranslations.mr) {
+                window.portalTranslations.mr.stat_last_agm_val = "१४ जून २०२६";
+                window.portalTranslations.mr.stat_next_agm_val = "अद्ययावत केली जाईल";
+            }
+        }
+    }
+
     // Initialize Active Language
     applyLanguage(currentLang);
 });
+

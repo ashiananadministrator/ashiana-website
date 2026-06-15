@@ -105,44 +105,127 @@
                         <i class="fas fa-file-pdf"></i> <span data-i18n="btn_view_docs">View Documents</span>
                     </a>
                     <a href="#contactSection" class="btn btn-secondary" id="heroContactBtn">
-                        <i class="fas fa-envelope"></i> <span data-i18n="btn_contact_committee">Contact Committee</span>
+                        <i class="fas fa-envelope"></i> <span data-i18n="btn_contact_comm">Contact Committee</span>
                     </a>
                 </div>
             </div>
             <div class="hero-image-container">
                 <div class="hero-card" id="quickStatsCard">
-                    <h3 data-i18n="quick_info_title">Quick Project Info</h3>
+                    <h3 data-i18n="stats_title">Quick Project Info</h3>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_authority">Authority</span>
-                        <span class="hero-stat-val" data-i18n="stat_authority_val">NMMC / CIDCO</span>
+                        <span class="hero-stat-val" data-i18n="val_nmmc_cidco">NMMC / CIDCO</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_pmc_status">PMC Status</span>
-                        <span class="hero-stat-val" data-i18n="stat_pmc_status_val">Not Appointed</span>
+                        <span class="hero-stat-val" data-i18n="val_not_appointed">Not Appointed</span>
                     </div>
                     <div class="hero-stat-row">
-                        <span class="hero-stat-label" data-i18n="stat_sgbm_count">Total Number of SGBM</span>
+                        <span class="hero-stat-label" data-i18n="stat_sgbm_count">Total SGBM</span>
                         <span class="hero-stat-val" data-i18n="stat_sgbm_count_val">0</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_last_sgbm">Last SGBM</span>
-                        <span class="hero-stat-val" data-i18n="stat_last_sgbm_val">To Be Updated</span>
+                        <span class="hero-stat-val" data-i18n="val_to_be_updated">To Be Updated</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_next_sgbm">Next SGBM</span>
-                        <span class="hero-stat-val" data-i18n="stat_next_sgbm_val">To Be Updated</span>
+                        <span class="hero-stat-val" data-i18n="val_to_be_updated">To Be Updated</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_last_agm">Last AGM</span>
-                        <span class="hero-stat-val" data-i18n="stat_last_agm_val">14 September 2025</span>
+                        <span class="hero-stat-val" data-i18n="stat_last_agm_val">14 June 2026</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_next_agm">Next AGM</span>
-                        <span class="hero-stat-val" data-i18n="stat_next_agm_val">14 June 2026</span>
+                        <span class="hero-stat-val" data-i18n="stat_next_agm_val">To Be Updated</span>
                     </div>
                     <div class="hero-stat-row" style="border: none;">
                         <span class="hero-stat-label" data-i18n="stat_location">Location</span>
-                        <span class="hero-stat-val" data-i18n="stat_location_val">Airoli, Sector 5</span>
+                        <span class="hero-stat-val" data-i18n="val_airoli">Airoli, Sector 5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redevelopment Progress Tracker Section -->
+    <section id="redevelopmentProgress" class="progress-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="progress_title">Redevelopment Activity Tracker</h2>
+                <p data-i18n="progress_desc">Track the real-time milestones of the Ashiana CHS redevelopment process, aligned with Section 79A of the MCS Act.</p>
+            </div>
+            <div class="progress-timeline-container">
+                <div class="progress-line">
+                    <div class="progress-line-fill" style="width: 20%;"></div>
+                </div>
+                <div class="progress-steps">
+                    <!-- Step 1 -->
+                    <div class="progress-step completed">
+                        <div class="step-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="step-content">
+                            <span class="step-status" data-i18n="status_completed">Completed</span>
+                            <h4 data-i18n="stage_1_title">Society Initiation</h4>
+                            <p data-i18n="stage_1_desc">Member Consent & SGBM Resolutions</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="progress-step active">
+                        <div class="step-icon">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                        <div class="step-content">
+                            <span class="step-status" data-i18n="status_active">Active Phase</span>
+                            <h4 data-i18n="stage_2_title">PMC Appointment</h4>
+                            <p data-i18n="stage_2_desc">Selecting & Appointing Project Consultant</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="progress-step pending">
+                        <div class="step-icon">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <div class="step-content">
+                            <span class="step-status" data-i18n="status_pending">Upcoming</span>
+                            <h4 data-i18n="stage_3_title">Feasibility Report</h4>
+                            <p data-i18n="stage_3_desc">Technical & Financial Feasibility Study</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="progress-step pending">
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="step-content">
+                            <span class="step-status" data-i18n="status_pending">Upcoming</span>
+                            <h4 data-i18n="stage_4_title">Developer Selection</h4>
+                            <p data-i18n="stage_4_desc">Tendering & Selecting Builder Partner</p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="progress-step pending">
+                        <div class="step-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="step-content">
+                            <span class="step-status" data-i18n="status_pending">Upcoming</span>
+                            <h4 data-i18n="stage_5_title">Agreements & NOCs</h4>
+                            <p data-i18n="stage_5_desc">Development Agreement & Municipal NOCs</p>
+                        </div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="progress-step pending">
+                        <div class="step-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="step-content">
+                            <span class="step-status" data-i18n="status_pending">Upcoming</span>
+                            <h4 data-i18n="stage_6_title">Reconstruction</h4>
+                            <p data-i18n="stage_6_desc">Demolition, Construction & Handover</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,10 +257,10 @@
             
             <!-- Resident Resources -->
             <article class="doc-card category-resources" data-category="resources" id="docCardAgmReportNotice" data-title-en="2nd AGM Notice & Annual Report">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
-                <h3 class="doc-title" data-i18n="doc_agm_report_notice">2nd AGM Notice & Annual Report</h3>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
+                <h3 class="doc-title" data-i18n="doc_agm_notice">2nd AGM Notice & Annual Report</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/2nd_AGM_Notice_Annual_Report.pdf" download class="btn-download" id="btnDownloadAgmReportNotice">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -185,10 +268,10 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardRegCert" data-title-en="Society Registration Certificate">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_reg_cert">Society Registration Certificate</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-image"></i> <span data-i18n="type_png">PNG Image</span></span>
+                    <span class="doc-type"><i class="fas fa-file-image"></i> <span data-i18n="badge_png">PNG Image</span></span>
                     <a href="documents/Society_Registration_Certificate.png" download class="btn-download" id="btnDownloadRegCert">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -196,10 +279,10 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardPmcLetter" data-title-en="PMC (Project Management Consultant) Appointment Letter">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_pmc_letter">PMC (Project Management Consultant) Appointment Letter</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/PMC_Appointment_Letter.pdf" download class="btn-download" id="btnDownloadPmcLetter">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -207,10 +290,10 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardSgm1Notice" data-title-en="1st SGM (Special General Body Meeting) Notice">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_sgm1_notice">1st SGM (Special General Body Meeting) Notice</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/1st_SGM_Notice.pdf" download class="btn-download" id="btnDownloadSgm1Notice">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -218,10 +301,10 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardSgm1Res" data-title-en="1st SGM Approved Resolutions">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_sgm1_res">1st SGM Approved Resolutions</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/1st_SGM_Resolution.pdf" download class="btn-download" id="btnDownloadSgm1Res">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -229,10 +312,10 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardSgm2Notice" data-title-en="2nd SGM (Special General Body Meeting) Notice">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_sgm2_notice">2nd SGM (Special General Body Meeting) Notice</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/2nd_SGM_Notice.pdf" download class="btn-download" id="btnDownloadSgm2Notice">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -240,10 +323,10 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardSgm2Res" data-title-en="2nd SGM Approved Resolutions">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_sgm2_res">2nd SGM Approved Resolutions</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/2nd_SGM_Resolution.pdf" download class="btn-download" id="btnDownloadSgm2Res">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -251,24 +334,22 @@
             </article>
 
             <article class="doc-card category-resources" data-category="resources" id="docCardFeasibility" data-title-en="Society Redevelopment Feasibility Report">
-                <span class="doc-category-tag" data-i18n="cat_resources">Resident Resources</span>
+                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
                 <h3 class="doc-title" data-i18n="doc_feasibility">Society Redevelopment Feasibility Report</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Feasibility_Report.pdf" download class="btn-download" id="btnDownloadFeasibility">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
             </article>
 
-
-
             <!-- Annexures -->
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexA" data-title-en="Annexure A - Proposed Building Layout & Plans">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_a">Annexure A - Proposed Building Layout & Plans</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_A_Building_Layout.pdf" download class="btn-download" id="btnDownloadAnnexA">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -276,10 +357,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexB" data-title-en="Annexure B - NMMC Statutory Clearance Notice">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_b">Annexure B - NMMC Statutory Clearance Notice</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_B_NMMC_Notice.pdf" download class="btn-download" id="btnDownloadAnnexB">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -287,10 +368,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexC" data-title-en="Annexure C - Reply Submitted to NMMC Notice">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_c">Annexure C - Reply Submitted to NMMC Notice</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_C_Reply_To_NMMC.pdf" download class="btn-download" id="btnDownloadAnnexC">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -298,10 +379,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexD" data-title-en="Annexure D - CIDCO Conversion NOC & Clearance">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_d">Annexure D - CIDCO Conversion NOC & Clearance</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_D_CIDCO_NOC.pdf" download class="btn-download" id="btnDownloadAnnexD">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -309,10 +390,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexE" data-title-en="Annexure E - Official Appointment Letter to Developer">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_e">Annexure E - Official Appointment Letter to Developer</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_E_Appointment_Letter_Developer.pdf" download class="btn-download" id="btnDownloadAnnexE">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -320,10 +401,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexF" data-title-en="Annexure F - Draft Redevelopment & Development Agreement">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_f">Annexure F - Draft Redevelopment & Development Agreement</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_F_Development_Agreement.pdf" download class="btn-download" id="btnDownloadAnnexF">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -331,10 +412,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexG" data-title-en="Annexure G - Detail of Existing Society Members & Flats">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_g">Annexure G - Detail of Existing Society Members & Flats</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_G_Existing_Members_Flats.pdf" download class="btn-download" id="btnDownloadAnnexG">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -342,10 +423,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexH" data-title-en="Annexure H - Proposed New Area Allocation Layout">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_h">Annexure H - Proposed New Area Allocation Layout</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_H_New_Area_Allocation.pdf" download class="btn-download" id="btnDownloadAnnexH">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -353,10 +434,10 @@
             </article>
 
             <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexI" data-title-en="Annexure I - Proposed Building Amenities Specification">
-                <span class="doc-category-tag" data-i18n="cat_annexures">Annexures</span>
+                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
                 <h3 class="doc-title" data-i18n="doc_annex_i">Annexure I - Proposed Building Amenities Specification</h3>
                 <div class="doc-meta">
-                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="type_pdf">PDF File</span></span>
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
                     <a href="documents/Annexure_I_Proposed_Amenities.pdf" download class="btn-download" id="btnDownloadAnnexI">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
@@ -377,25 +458,25 @@
     <section class="contact-section" id="aboutRedev" style="background-color: var(--bg-main); padding: 5rem 2rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container" style="padding: 0;">
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; font-family: var(--font-heading); color: var(--primary);" data-i18n="redev_transparency_title">Transparency in Redevelopment</h2>
-                <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;" data-i18n="redev_transparency_desc">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; font-family: var(--font-heading); color: var(--primary);" data-i18n="about_title">Transparency in Redevelopment</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;" data-i18n="about_desc">
                     In accordance with section 79A guidelines of the Maharashtra Co-operative Societies Act, our society management is dedicated to upholding the highest levels of transparency and democracy in our redevelopment process. Every decision, resolution, financial feasibility report, and clearance is posted publically for all society members and tenants to verify.
                 </p>
                 <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem;">
                     <div style="text-align: center; max-width: 200px;">
                         <i class="fas fa-balance-scale" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;" data-i18n="feature_compliance_title">Legal Compliance</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="feature_compliance_desc">Fully aligned with NMMC guidelines and CIDCO NOC protocols.</p>
+                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;" data-i18n="card_legal_title">Legal Compliance</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="card_legal_desc">Fully aligned with NMMC guidelines and CIDCO NOC protocols.</p>
                     </div>
                     <div style="text-align: center; max-width: 200px;">
                         <i class="fas fa-users" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;" data-i18n="feature_consent_title">Member Consent</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="feature_consent_desc">All major decisions backed by Special General Body resolutions.</p>
+                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;" data-i18n="card_consent_title">Member Consent</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="card_consent_desc">All major decisions backed by Special General Body resolutions.</p>
                     </div>
                     <div style="text-align: center; max-width: 200px;">
                         <i class="fas fa-handshake" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;" data-i18n="feature_pmc_title">Reputed PMC</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="feature_pmc_desc">Professional PMCs appointed to safeguard the interests of all members.</p>
+                        <h4 style="font-family: var(--font-body); font-weight: 700; margin-bottom: 0.5rem;" data-i18n="card_pmc_title">Reputed PMC</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="card_pmc_desc">Professional PMCs appointed to safeguard the interests of all members.</p>
                     </div>
                 </div>
             </div>
@@ -503,6 +584,82 @@
         </div>
     </section>
 
+    <!-- Meeting History Log Section -->
+    <section id="meetingHistory" class="meeting-history-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="history_title">SGBM & AGM Meeting History Log</h2>
+                <p data-i18n="history_desc">A chronological list of all general body and special general body meetings conducted in the society's history.</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge agm-badge">AGM</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title" data-i18n="m_1_title">1st AGM (Annual General Meeting)</h4>
+                            <p class="timeline-meta">
+                                <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_1_date">17 August 2025</span></span>
+                                <span class="meta-status completed"><i class="fas fa-check-circle"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_completed">Completed</span></span>
+                            </p>
+                        </div>
+                        <div class="timeline-body">
+                            <p data-i18n="m_1_desc">Review of annual audits and formation of the redevelopment sub-committee.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge sgbm-badge">SGBM</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title" data-i18n="m_2_title">1st SGBM (Special General Body Meeting)</h4>
+                            <p class="timeline-meta">
+                                <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_2_date">12 October 2025</span></span>
+                                <span class="meta-status completed"><i class="fas fa-check-circle"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_completed">Completed</span></span>
+                            </p>
+                        </div>
+                        <div class="timeline-body">
+                            <p data-i18n="m_2_desc">Resolutions passed to initiate the redevelopment process and collect member consent.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge sgbm-badge">SGBM</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title" data-i18n="m_3_title">2nd SGBM (Special General Body Meeting)</h4>
+                            <p class="timeline-meta">
+                                <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_3_date">18 January 2026</span></span>
+                                <span class="meta-status completed"><i class="fas fa-check-circle"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_completed">Completed</span></span>
+                            </p>
+                        </div>
+                        <div class="timeline-body">
+                            <p data-i18n="m_3_desc">Finalized selection criteria and floated tenders for appointing the Project Management Consultant (PMC).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-badge agm-badge">AGM</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title" data-i18n="m_4_title">2nd AGM (Annual General Meeting)</h4>
+                            <p class="timeline-meta">
+                                <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_4_date">14 June 2026</span></span>
+                                <span class="meta-status recent"><i class="fas fa-check-circle"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_recent">Recently Completed</span></span>
+                            </p>
+                        </div>
+                        <div class="timeline-body">
+                            <p data-i18n="m_4_desc">Annual audits and review of the draft redevelopment feasibility reports. (Recently Completed)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Us Section -->
     <section class="contact-section" id="contactSection">
         <div class="container">
@@ -518,8 +675,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <div class="contact-label" data-i18n="contact_address_label">Office Address</div>
-                            <div class="contact-val" data-i18n="contact_address_val">Ashiana Co-Operative Housing Society Ltd., TYPE: AL-6, BLDG NO 1 TO 4, COND NO 3, SEC 5, AIROLI, NAVI MUMBAI 400708</div>
+                            <div class="contact-label" data-i18n="label_office">Office Address</div>
+                            <div class="contact-val" data-i18n="hero_address">Ashiana Co-Operative Housing Society Ltd., TYPE: AL-6, BLDG NO 1 TO 4, COND NO 3, SEC 5, AIROLI, NAVI MUMBAI 400708</div>
                         </div>
                     </div>
 
@@ -528,8 +685,8 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div>
-                            <div class="contact-label" data-i18n="contact_hours_label">Meeting Hours</div>
-                            <div class="contact-val" data-i18n="contact_hours_val">Sundays: 10:00 AM - 12:30 PM (Society Office)</div>
+                            <div class="contact-label" data-i18n="label_hours">Meeting Hours</div>
+                            <div class="contact-val" data-i18n="val_hours">Sundays: 10:00 AM - 12:30 PM (Society Office)</div>
                         </div>
                     </div>
 
@@ -538,7 +695,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <div class="contact-label" data-i18n="contact_email_label">Email Address</div>
+                            <div class="contact-label" data-i18n="label_email">Email Address</div>
                              <div class="contact-val"><a href="mailto:committee@ashianasociety.com">committee@ashianasociety.com</a></div>
                         </div>
                     </div>
@@ -569,10 +726,10 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <span class="footer-logo-main" data-i18n="footer_society_title">ASHIANA CO-OPERATIVE HOUSING SOCIETY LTD</span>
-                <span style="font-size: 0.8rem; margin-top: 4px; color: #94A3B8;" data-i18n="footer_society_est">Estd: 2025 | Reg No: N.B.O.M/CIDCO/HSG(TC)10786/D.R.</span>
+                <span style="font-size: 0.8rem; margin-top: 4px; color: #94A3B8;" data-i18n="footer_logo_sub">Estd: 2025 | Reg No: N.B.O.M/CIDCO/HSG(TC)10786/D.R.</span>
             </div>
             <div class="footer-disclaimer">
-                <p data-i18n="footer_rights">&copy; 2026 Ashiana Co-Operative Housing Society Ltd. All rights reserved.</p>
+                <p data-i18n="footer_copyright">&copy; 2026 Ashiana Co-Operative Housing Society Ltd. All rights reserved.</p>
                 <p style="font-size: 0.75rem; color: #64748b; margin-top: 8px;" data-i18n="footer_disclaimer">Disclaimer: This website is for informational and transparency purposes strictly intended for the members of Ashiana CHS, Sector 5, Airoli. Documents uploaded here are draft copies subject to general body consensus and statutory approval.</p>
             </div>
         </div>
