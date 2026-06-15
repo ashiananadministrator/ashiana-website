@@ -1716,7 +1716,7 @@ footer {
     background-color: var(--primary, #0F172A);
 }
 
-.meeting-history-section .sgbm-badge {
+.meeting-history-section .sgm-badge {
     background-color: var(--accent, #D97706);
 }
 
