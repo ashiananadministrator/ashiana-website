@@ -342,35 +342,35 @@ nav a:hover::after {
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px);
     border-radius: var(--border-radius);
-    padding: 2rem;
+    padding: 1.25rem;
     width: 100%;
     box-shadow: var(--shadow-lg);
 }
 
 .hero-card h3 {
     color: #FFFFFF;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
     border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
 }
 
 .hero-stat-row {
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem 0;
+    padding: 0.45rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .hero-stat-label {
     color: #94A3B8;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .hero-stat-val {
     font-weight: 600;
     color: #FFFFFF;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* Main Container Section */
