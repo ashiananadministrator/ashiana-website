@@ -95,7 +95,7 @@ window.portalTranslations = {
     card_pmc_desc: "Professional PMCs appointed to safeguard the interests of all members.",
     
     // Meeting History
-    history_title: "SGBM & AGM Meeting History Log",
+    history_title: "History Log",
     history_desc: "A chronological list of all general body and special general body meetings conducted in the society's history.",
     history_date: "Date: ",
     history_status: "Status: ",
@@ -285,7 +285,7 @@ window.portalTranslations = {
     card_pmc_desc: "सभी सदस्यों के हितों की रक्षा के लिए पेशेवर पीएमसी नियुक्त किए जाते हैं।",
     
     // Meeting History
-    history_title: "एसजीबीएम और एजीएम बैठक इतिहास लॉग",
+    history_title: "इतिहास लॉग",
     history_desc: "सोसाइटी के इतिहास में आयोजित सभी आम सभा और विशेष आम सभा बैठकों की कालानुक्रमिक सूची।",
     history_date: "दिनांक: ",
     history_status: "स्थिति: ",
@@ -475,7 +475,7 @@ window.portalTranslations = {
     card_pmc_desc: "सर्व सदस्यांच्या हिताचे रक्षण करण्यासाठी व्यावसायिक पीएमसी सल्लागारांची नियुक्ती केली जाते।",
     
     // Meeting History
-    history_title: "एसजीबीएम आणि एजीएम बैठकांचा इतिहास",
+    history_title: "इतिहास नोंद",
     history_desc: "संस्थेच्या इतिहासात घेतलेल्या सर्व सर्वसाधारण आणि विशेष सर्वसाधारण सभांची कालानुक्रमिक यादी।",
     history_date: "दिनांक: ",
     history_status: "स्थिती: ",

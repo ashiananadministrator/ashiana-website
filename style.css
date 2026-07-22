@@ -2186,30 +2186,36 @@ padding-bottom: 0.5rem;
 /* Meeting Columns Layout (Desktop) */
 .meeting-history-section .meeting-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
     margin-top: 3rem;
+}
+
+@media (max-width: 1200px) {
+    .meeting-history-section .meeting-columns {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .meeting-history-section .meeting-column {
     background-color: var(--bg-card);
     border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: var(--shadow-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
 }
 
 .meeting-history-section .column-title {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
 }
 
 .meeting-history-section .column-title i {
@@ -2220,8 +2226,8 @@ padding-bottom: 0.5rem;
     background: #FFFDF9;
     border: 1px solid #FDE68A;
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
