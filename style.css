@@ -1771,6 +1771,10 @@ footer {
     color: #3B82F6;
 }
 
+.meeting-history-section .meta-status.scheduled i {
+    color: #F59E0B;
+}
+
 .meeting-history-section .timeline-body p {
     color: var(--text-muted, #64748B);
     font-size: 0.92rem;
