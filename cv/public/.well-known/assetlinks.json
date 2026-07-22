@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ashianasociety.atsresume",
+      "sha256_cert_fingerprints": [
+        "F7:E8:33:00:FA:60:B8:6C:E6:38:8B:D6:00:6A:21:03:75:21:32:4E:0F:8F:25:40:FB:E1:04:30:24:CE:11:D5"
+      ]
+    }
+  }
+]
