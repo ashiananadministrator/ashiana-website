@@ -106,10 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const matchesCategory = activeCategory === 'all' || category === activeCategory;
             
             if (matchesSearch && matchesCategory) {
-                card.style.display = 'flex';
+                card.classList.remove('hidden');
                 visibleCount++;
             } else {
-                card.style.display = 'none';
+                card.classList.add('hidden');
             }
         });
         if (visibleCount === 0) {

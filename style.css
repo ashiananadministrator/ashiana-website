@@ -2470,3 +2470,8 @@ padding-bottom: 0.5rem;
         margin-top: 0.5rem;
     }
 }
+
+/* Hide utility for filtering */
+.doc-card.hidden {
+    display: none !important;
+}
