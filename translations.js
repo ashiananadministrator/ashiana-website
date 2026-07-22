@@ -25,7 +25,7 @@ window.portalTranslations = {
     val_nmmc_cidco: "NMMC / CIDCO",
     val_not_appointed: "Not Appointed",
     val_to_be_updated: "To Be Updated",
-    stat_next_sgbm_val: "2nd Aug 2026",
+    stat_next_sgbm_val: "2 August 2026",
     val_airoli: "Airoli, Sector 5",
     
     // Progress Bar
