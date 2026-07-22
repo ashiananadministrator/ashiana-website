@@ -619,7 +619,7 @@ nav a:hover::after {
 
 /* Contact Us Section */
 .contact-section {
-    background-color: #FFFFFF;
+    background-color: #F8FAFC;
     border-top: 1px solid var(--border-color);
 }
 
@@ -627,13 +627,30 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: 1fr;
     gap: 4rem;
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
+}
+
+.contact-info-panel {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-top: 5px solid var(--primary);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.contact-info-panel:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-2px);
 }
 
 .contact-info-panel h3 {
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .contact-desc {
@@ -1849,6 +1866,10 @@ footer {
     /* Meeting Columns Layout (Mobile) */
     .meeting-history-section .meeting-columns {
         grid-template-columns: 1fr;
+    }
+
+    .contact-info-panel {
+        padding: 1.5rem;
     }
 }
 
