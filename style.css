@@ -541,6 +541,22 @@ nav a:hover::after {
     color: var(--accent);
 }
 
+.doc-card.category-agm::before {
+    background-color: #2563EB;
+}
+
+.doc-card.category-agm .doc-category-tag {
+    color: #2563EB;
+}
+
+.doc-card.category-sgbm::before {
+    background-color: #7C3AED;
+}
+
+.doc-card.category-sgbm .doc-category-tag {
+    color: #7C3AED;
+}
+
 .doc-title {
     font-family: var(--font-heading);
     font-size: 1.2rem;
