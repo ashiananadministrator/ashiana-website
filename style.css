@@ -2526,3 +2526,14 @@ padding-bottom: 0.5rem;
     background-color: #FEE2E2;
     color: #991B1B;
 }
+
+.stat-link {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: inherit;
+    transition: var(--transition);
+}
+
+.stat-link:hover {
+    color: #FFFFFF;
+}
