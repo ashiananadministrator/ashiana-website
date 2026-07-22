@@ -251,199 +251,377 @@
         </div>
 
         <!-- Documents Grid -->
-        <div class="doc-grid" id="documentsGrid">
-            
-            <!-- Resident Resources -->
-            <article class="doc-card category-agm" data-category="agm" id="docCardAgmReportNotice" data-title-en="2nd AGM Notice & Annual Report">
-                <span class="doc-category-tag" data-i18n="filter_agm">AGM</span>
-                <h3 class="doc-title" data-i18n="doc_agm_notice">2nd AGM Notice & Annual Report</h3>
-                <div class="doc-meta">
+        <!-- Documents Table -->
+        <div class="doc-table-container" id="documentsGrid">
+            <!-- Table Header -->
+            <div class="doc-table-header">
+                <div class="col-title" data-i18n="table_col_title">Document Title</div>
+                <div class="col-category" data-i18n="table_col_category">Category</div>
+                <div class="col-format" data-i18n="table_col_format">Format</div>
+                <div class="col-status" data-i18n="table_col_status">Status</div>
+                <div class="col-action" data-i18n="table_col_action">Action</div>
+            </div>
+
+            <!-- 1. AGM Notice & Annual Report -->
+            <div class="doc-card doc-table-row category-agm" data-category="agm" id="docCardAgmReportNotice" data-title-en="2nd AGM Notice & Annual Report">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_agm_notice">2nd AGM Notice & Annual Report</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_agm">AGM</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <!-- Hidden tag for script.js to find and insert status tag next to it -->
+                    <span class="doc-category-tag" data-i18n="filter_agm" style="display:none;">AGM</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/2nd_AGM_Notice_Annual_Report.pdf" download class="btn-download" id="btnDownloadAgmReportNotice">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-resources" data-category="resources" id="docCardRegCert" data-title-en="Society Registration Certificate">
-                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
-                <h3 class="doc-title" data-i18n="doc_reg_cert">Society Registration Certificate</h3>
-                <div class="doc-meta">
+            <!-- 2. Society Registration Certificate -->
+            <div class="doc-card doc-table-row category-resources" data-category="resources" id="docCardRegCert" data-title-en="Society Registration Certificate">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_reg_cert">Society Registration Certificate</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_resources">Resident Resources</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-image"></i> <span data-i18n="badge_png">PNG Image</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_resources" style="display:none;">Resident Resources</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Society_Registration_Certificate.png" download class="btn-download" id="btnDownloadRegCert">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-resources" data-category="resources" id="docCardPmcLetter" data-title-en="PMC (Project Management Consultant) Appointment Letter">
-                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
-                <h3 class="doc-title" data-i18n="doc_pmc_letter">PMC (Project Management Consultant) Appointment Letter</h3>
-                <div class="doc-meta">
+            <!-- 3. PMC Appointment Letter -->
+            <div class="doc-card doc-table-row category-resources" data-category="resources" id="docCardPmcLetter" data-title-en="PMC (Project Management Consultant) Appointment Letter">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_pmc_letter">PMC (Project Management Consultant) Appointment Letter</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_resources">Resident Resources</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_resources" style="display:none;">Resident Resources</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/PMC_Appointment_Letter.pdf" download class="btn-download" id="btnDownloadPmcLetter">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-sgbm" data-category="sgbm" id="docCardSgm1Notice" data-title-en="1st SGM (Special General Body Meeting) Notice">
-                <span class="doc-category-tag" data-i18n="filter_sgbm">SGBM</span>
-                <h3 class="doc-title" data-i18n="doc_sgm1_notice">1st SGM (Special General Body Meeting) Notice</h3>
-                <div class="doc-meta">
+            <!-- 4. 1st SGM Notice -->
+            <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCardSgm1Notice" data-title-en="1st SGM (Special General Body Meeting) Notice">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_sgm1_notice">1st SGM (Special General Body Meeting) Notice</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_sgbm">SGBM</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_sgbm" style="display:none;">SGBM</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/1st_SGM_Notice.pdf" download class="btn-download" id="btnDownloadSgm1Notice">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-sgbm" data-category="sgbm" id="docCardSgm1Res" data-title-en="1st SGM Approved Resolutions">
-                <span class="doc-category-tag" data-i18n="filter_sgbm">SGBM</span>
-                <h3 class="doc-title" data-i18n="doc_sgm1_res">1st SGM Approved Resolutions</h3>
-                <div class="doc-meta">
+            <!-- 5. 1st SGM Resolutions -->
+            <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCardSgm1Res" data-title-en="1st SGM Approved Resolutions">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_sgm1_res">1st SGM Approved Resolutions</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_sgbm">SGBM</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_sgbm" style="display:none;">SGBM</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/1st_SGM_Resolution.pdf" download class="btn-download" id="btnDownloadSgm1Res">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-sgbm" data-category="sgbm" id="docCardSgm2Notice" data-title-en="2nd SGM (Special General Body Meeting) Notice">
-                <span class="doc-category-tag" data-i18n="filter_sgbm">SGBM</span>
-                <h3 class="doc-title" data-i18n="doc_sgm2_notice">2nd SGM (Special General Body Meeting) Notice</h3>
-                <div class="doc-meta">
+            <!-- 6. 2nd SGM Notice -->
+            <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCardSgm2Notice" data-title-en="2nd SGM (Special General Body Meeting) Notice">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_sgm2_notice">2nd SGM (Special General Body Meeting) Notice</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_sgbm">SGBM</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_sgbm" style="display:none;">SGBM</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/2nd_SGM_Notice.pdf" download class="btn-download" id="btnDownloadSgm2Notice">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-sgbm" data-category="sgbm" id="docCardSgm2Res" data-title-en="2nd SGM Approved Resolutions">
-                <span class="doc-category-tag" data-i18n="filter_sgbm">SGBM</span>
-                <h3 class="doc-title" data-i18n="doc_sgm2_res">2nd SGM Approved Resolutions</h3>
-                <div class="doc-meta">
+            <!-- 7. 2nd SGM Resolutions -->
+            <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCardSgm2Res" data-title-en="2nd SGM Approved Resolutions">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_sgm2_res">2nd SGM Approved Resolutions</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_sgbm">SGBM</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_sgbm" style="display:none;">SGBM</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/2nd_SGM_Resolution.pdf" download class="btn-download" id="btnDownloadSgm2Res">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-resources" data-category="resources" id="docCardFeasibility" data-title-en="Society Redevelopment Feasibility Report">
-                <span class="doc-category-tag" data-i18n="filter_resources">Resident Resources</span>
-                <h3 class="doc-title" data-i18n="doc_feasibility">Society Redevelopment Feasibility Report</h3>
-                <div class="doc-meta">
+            <!-- 8. Redevelopment Feasibility Report -->
+            <div class="doc-card doc-table-row category-resources" data-category="resources" id="docCardFeasibility" data-title-en="Society Redevelopment Feasibility Report">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_feasibility">Society Redevelopment Feasibility Report</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_resources">Resident Resources</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_resources" style="display:none;">Resident Resources</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Feasibility_Report.pdf" download class="btn-download" id="btnDownloadFeasibility">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <!-- Annexures -->
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexA" data-title-en="Annexure A - Proposed Building Layout & Plans">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_a">Annexure A - Proposed Building Layout & Plans</h3>
-                <div class="doc-meta">
+            <!-- 9. Annexure A -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexA" data-title-en="Annexure A - Proposed Building Layout & Plans">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_a">Annexure A - Proposed Building Layout & Plans</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_A_Building_Layout.pdf" download class="btn-download" id="btnDownloadAnnexA">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexB" data-title-en="Annexure B - NMMC Statutory Clearance Notice">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_b">Annexure B - NMMC Statutory Clearance Notice</h3>
-                <div class="doc-meta">
+            <!-- 10. Annexure B -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexB" data-title-en="Annexure B - NMMC Statutory Clearance Notice">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_b">Annexure B - NMMC Statutory Clearance Notice</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_B_NMMC_Notice.pdf" download class="btn-download" id="btnDownloadAnnexB">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexC" data-title-en="Annexure C - Reply Submitted to NMMC Notice">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_c">Annexure C - Reply Submitted to NMMC Notice</h3>
-                <div class="doc-meta">
+            <!-- 11. Annexure C -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexC" data-title-en="Annexure C - Reply Submitted to NMMC Notice">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_c">Annexure C - Reply Submitted to NMMC Notice</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_C_Reply_To_NMMC.pdf" download class="btn-download" id="btnDownloadAnnexC">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexD" data-title-en="Annexure D - CIDCO Conversion NOC & Clearance">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_d">Annexure D - CIDCO Conversion NOC & Clearance</h3>
-                <div class="doc-meta">
+            <!-- 12. Annexure D -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexD" data-title-en="Annexure D - CIDCO Conversion NOC & Clearance">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_d">Annexure D - CIDCO Conversion NOC & Clearance</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_D_CIDCO_NOC.pdf" download class="btn-download" id="btnDownloadAnnexD">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexE" data-title-en="Annexure E - Official Appointment Letter to Developer">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_e">Annexure E - Official Appointment Letter to Developer</h3>
-                <div class="doc-meta">
+            <!-- 13. Annexure E -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexE" data-title-en="Annexure E - Official Appointment Letter to Developer">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_e">Annexure E - Official Appointment Letter to Developer</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_E_Appointment_Letter_Developer.pdf" download class="btn-download" id="btnDownloadAnnexE">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexF" data-title-en="Annexure F - Draft Redevelopment & Development Agreement">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_f">Annexure F - Draft Redevelopment & Development Agreement</h3>
-                <div class="doc-meta">
+            <!-- 14. Annexure F -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexF" data-title-en="Annexure F - Draft Redevelopment & Development Agreement">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_f">Annexure F - Draft Redevelopment & Development Agreement</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_F_Development_Agreement.pdf" download class="btn-download" id="btnDownloadAnnexF">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexG" data-title-en="Annexure G - Detail of Existing Society Members & Flats">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_g">Annexure G - Detail of Existing Society Members & Flats</h3>
-                <div class="doc-meta">
+            <!-- 15. Annexure G -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexG" data-title-en="Annexure G - Detail of Existing Society Members & Flats">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_g">Annexure G - Detail of Existing Society Members & Flats</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_G_Existing_Members_Flats.pdf" download class="btn-download" id="btnDownloadAnnexG">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexH" data-title-en="Annexure H - Proposed New Area Allocation Layout">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_h">Annexure H - Proposed New Area Allocation Layout</h3>
-                <div class="doc-meta">
+            <!-- 16. Annexure H -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexH" data-title-en="Annexure H - Proposed New Area Allocation Layout">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_h">Annexure H - Proposed New Area Allocation Layout</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_H_New_Area_Allocation.pdf" download class="btn-download" id="btnDownloadAnnexH">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="doc-card category-annexure" data-category="annexures" id="docCardAnnexI" data-title-en="Annexure I - Proposed Building Amenities Specification">
-                <span class="doc-category-tag" data-i18n="filter_annexures">Annexures</span>
-                <h3 class="doc-title" data-i18n="doc_annex_i">Annexure I - Proposed Building Amenities Specification</h3>
-                <div class="doc-meta">
+            <!-- 17. Annexure I -->
+            <div class="doc-card doc-table-row category-annexure" data-category="annexures" id="docCardAnnexI" data-title-en="Annexure I - Proposed Building Amenities Specification">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_annex_i">Annexure I - Proposed Building Amenities Specification</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-format">
                     <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
                     <a href="documents/Annexure_I_Proposed_Amenities.pdf" download class="btn-download" id="btnDownloadAnnexI">
                         <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
                     </a>
                 </div>
-            </article>
+            </div>
 
             <!-- Dynamic Search Fallback (Hidden by default) -->
-            <div class="no-docs-message" id="noDocsMessage" style="display: none;">
+            <div class="no-docs-message" id="noDocsMessage" style="display: none; padding: 3rem; text-align: center; width: 100%;">
                 <i class="fas fa-search-minus" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; display: block;"></i>
                 <h4 data-i18n="no_docs_title">No Matching Documents Found</h4>
                 <p data-i18n="no_docs_desc">Try searching for other terms like 'SGM', 'Notice', 'NMMC' or 'Annexure'.</p>

@@ -2087,6 +2087,201 @@ footer {
     border-radius: 4px;
     transition: var(--transition);
 }
+padding-bottom: 0.5rem;
+}
+
+.premium-footer .footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.premium-footer .footer-about-text {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.premium-footer .footer-reg-badge {
+    font-size: 0.75rem;
+    color: #64748B;
+    background-color: #1E293B;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.premium-footer .links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.premium-footer .links-col ul li {
+    margin-bottom: 0.75rem;
+}
+
+.premium-footer .links-col ul li a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.premium-footer .links-col ul li a:hover {
+    color: var(--accent);
+    padding-left: 4px;
+}
+
+.premium-footer .contact-col .footer-contact-item {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.5;
+}
+
+.premium-footer .contact-col .footer-contact-item i {
+    color: var(--accent);
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.premium-footer .contact-col .footer-contact-item a {
+    color: #94A3B8;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.premium-footer .contact-col .footer-contact-item a:hover {
+    color: var(--accent);
+}
+
+.premium-footer .footer-bottom {
+    border-top: 1px solid #1E293B;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.premium-footer .footer-copyright {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    margin-bottom: 0.75rem;
+}
+
+.premium-footer .footer-disclaimer-text {
+    font-size: 0.75rem;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+/* Meeting Columns Layout (Desktop) */
+.meeting-history-section .meeting-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.meeting-history-section .meeting-column {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.meeting-history-section .column-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.meeting-history-section .column-title i {
+    color: var(--accent);
+}
+
+.meeting-history-section .meeting-card {
+    background: #FFFDF9;
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.meeting-history-section .meeting-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.meeting-history-section .meeting-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.meeting-history-section .meeting-card-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.meeting-history-section .meeting-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.meeting-history-section .meeting-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.meeting-history-section .meeting-card-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.meeting-history-section .meeting-doc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background-color: var(--accent);
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
 
 .meeting-history-section .meeting-doc-btn:hover {
     background-color: var(--accent-hover);
@@ -2099,4 +2294,173 @@ footer {
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     font-weight: 500;
+}
+
+/* Document Table Layout */
+.doc-table-container {
+    width: 100%;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.doc-table-header {
+    display: flex;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.doc-table-header div {
+    display: flex;
+    align-items: center;
+}
+
+.doc-table-row {
+    display: flex !important; /* Force flex display when visible */
+    flex-direction: row !important; /* Ensure horizontal flow */
+    align-items: center;
+    padding: 1.25rem 2rem !important;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #FFFFFF;
+    transition: var(--transition);
+}
+
+.doc-table-row:last-child {
+    border-bottom: none;
+}
+
+.doc-table-row:hover {
+    background-color: #F8FAFC;
+    transform: none !important; /* Override vertical hover float of old cards */
+    box-shadow: none !important;
+}
+
+/* Column Widths (Desktop) */
+.col-title {
+    flex: 3;
+    padding-right: 1.5rem;
+}
+
+.col-category {
+    flex: 1.5;
+    padding-right: 1rem;
+}
+
+.col-format {
+    flex: 1.2;
+    padding-right: 1rem;
+}
+
+.col-status {
+    flex: 1.5;
+    padding-right: 1rem;
+}
+
+.col-action {
+    flex: 1.2;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Table element styling overrides */
+.doc-table-row .doc-title {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.doc-table-row .doc-display-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background-color: #F1F5F9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.doc-table-row.category-agm .doc-display-category {
+    color: #2563EB;
+    background-color: #EFF6FF;
+}
+
+.doc-table-row.category-sgbm .doc-display-category {
+    color: #7C3AED;
+    background-color: #F5F3FF;
+}
+
+.doc-table-row.category-annexure .doc-display-category {
+    color: var(--accent);
+    background-color: #FFFBEB;
+}
+
+.doc-table-row .doc-type {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.doc-table-row .doc-status-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.doc-table-row.uploaded {
+    border-left: 4px solid #10B981;
+}
+
+.doc-table-row.uploaded .doc-status-tag {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.doc-table-row.missing {
+    border-left: 4px solid #EF4444;
+}
+
+.doc-table-row.missing .doc-status-tag {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.doc-table-row .btn-download {
+    margin-top: 0;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Mobile Responsiveness for Table */
+@media (max-width: 900px) {
+    .doc-table-header {
+        display: none; /* Hide header on mobile */
+    }
+    
+    .doc-table-row {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1.5rem !important;
+    }
+    
+    .doc-table-row div {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .col-action {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
 }
