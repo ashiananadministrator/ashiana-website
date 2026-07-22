@@ -2312,10 +2312,10 @@ padding-bottom: 0.5rem;
     background-color: var(--primary);
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 1.25rem 2rem;
+    padding: 0.75rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -2328,7 +2328,7 @@ padding-bottom: 0.5rem;
     display: flex !important; /* Force flex display when visible */
     flex-direction: row !important; /* Ensure horizontal flow */
     align-items: center;
-    padding: 1.25rem 2rem !important;
+    padding: 0.6rem 1.5rem !important;
     border-bottom: 1px solid var(--border-color);
     background-color: #FFFFFF;
     transition: var(--transition);
@@ -2374,7 +2374,7 @@ padding-bottom: 0.5rem;
 
 /* Table element styling overrides */
 .doc-table-row .doc-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 0;
     font-family: var(--font-body);
     font-weight: 500;
