@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Document Search & Filter Logic
     const searchInput = document.getElementById('docSearch');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const docCards = document.querySelectorAll('#documentsGrid .doc-card');
+    const docCards = document.querySelectorAll('.doc-card');
     const noDocsMessage = document.getElementById('noDocsMessage');
     let activeCategory = 'all';
     let searchQuery = '';
@@ -99,7 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterDocuments() {
         let visibleCount = 0;
         docCards.forEach(card => {
-            const title = card.querySelector('.doc-title').textContent.toLowerCase();
+            const titleEl = card.querySelector('.doc-title');
+            if (!titleEl) return; // Skip cards that don't have a title (like log cards)
+
+            const title = titleEl.textContent.toLowerCase();
             const originalTitle = card.dataset.titleEn ? card.dataset.titleEn.toLowerCase() : '';
             const category = card.dataset.category;
             const matchesSearch = title.includes(searchQuery) || originalTitle.includes(searchQuery);
