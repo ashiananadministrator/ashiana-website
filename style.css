@@ -2475,3 +2475,33 @@ padding-bottom: 0.5rem;
 .doc-card.hidden {
     display: none !important;
 }
+
+/* Documents Log Real-Time Status Styling */
+.meeting-history-section .meeting-card.uploaded {
+    border-color: #10B981 !important;
+    background-color: #ECFDF5 !important;
+}
+
+.meeting-history-section .meeting-card.missing {
+    border-color: #EF4444 !important;
+    background-color: #FEF2F2 !important;
+}
+
+.meeting-history-section .meeting-card .doc-status-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+
+.meeting-history-section .meeting-card.uploaded .doc-status-tag {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.meeting-history-section .meeting-card.missing .doc-status-tag {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}

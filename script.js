@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Document Search & Filter Logic
     const searchInput = document.getElementById('docSearch');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const docCards = document.querySelectorAll('.doc-card');
+    const docCards = document.querySelectorAll('#documentsGrid .doc-card');
     const noDocsMessage = document.getElementById('noDocsMessage');
     let activeCategory = 'all';
     let searchQuery = '';
