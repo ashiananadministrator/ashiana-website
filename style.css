@@ -98,6 +98,7 @@ header {
     font-weight: 700;
     color: var(--primary);
     letter-spacing: -0.5px;
+    text-transform: uppercase;
 }
 
 .logo-sub {
@@ -555,6 +556,14 @@ nav a:hover::after {
 
 .doc-card.category-sgbm .doc-category-tag {
     color: #7C3AED;
+}
+
+.doc-card.category-advt::before {
+    background-color: #0D9488;
+}
+
+.doc-card.category-advt .doc-category-tag {
+    color: #0D9488;
 }
 
 .doc-title {
@@ -2424,6 +2433,11 @@ padding-bottom: 0.5rem;
 .doc-table-row.category-sgbm .doc-display-category {
     color: #7C3AED;
     background-color: #F5F3FF;
+}
+
+.doc-table-row.category-advt .doc-display-category {
+    color: #0D9488;
+    background-color: #F0FDFA;
 }
 
 .doc-table-row.category-annexure .doc-display-category {
