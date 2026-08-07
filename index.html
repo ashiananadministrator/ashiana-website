@@ -118,11 +118,11 @@
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_pmc_status">PMC Status</span>
-                        <span class="hero-stat-val" data-i18n="val_not_appointed">Not Appointed</span>
+                        <span class="hero-stat-val" data-i18n="val_pmc_status_val">Advt Out on 05/08/2026</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_sgbm_count">Total SGBM</span>
-                        <span class="hero-stat-val" data-i18n="stat_sgbm_count_val">1</span>
+                        <span class="hero-stat-val" data-i18n="stat_sgbm_count_val">2</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_agm_count">Total AGM</span>
@@ -130,11 +130,11 @@
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_last_sgbm">Last SGBM</span>
-                        <span class="hero-stat-val"><a href="#portalSection" class="stat-link" data-i18n="stat_last_sgbm_val">12 October 2025</a></span>
+                        <span class="hero-stat-val"><a href="#portalSection" class="stat-link" data-i18n="stat_last_sgbm_val">2 August 2026</a></span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_next_sgbm">Next SGBM</span>
-                        <span class="hero-stat-val" data-i18n="stat_next_sgbm_val">2 August 2026</span>
+                        <span class="hero-stat-val" data-i18n="stat_next_sgbm_val">To Be Updated</span>
                     </div>
                     <div class="hero-stat-row">
                         <span class="hero-stat-label" data-i18n="stat_last_agm">Last AGM</span>
@@ -288,7 +288,70 @@
                 </div>
             </div>
 
-            <!-- 2. Society Registration Certificate -->
+            <!-- 2. 1st AGM Minutes of Meeting -->
+            <div class="doc-card doc-table-row category-agm" data-category="agm" id="docCard1stAgmMinutes" data-title-en="1st AGM Minutes of Meeting">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_1st_agm_minutes">1st AGM Minutes of Meeting</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_agm">AGM</span>
+                </div>
+                <div class="col-format">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_agm" style="display:none;">AGM</span>
+                </div>
+                <div class="col-action">
+                    <a href="documents/1st_AGM_Minutes.pdf" download class="btn-download" id="btnDownload1stAgmMinutes">
+                        <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. 1st AGM Notice -->
+            <div class="doc-card doc-table-row category-agm" data-category="agm" id="docCard1stAgmNotice" data-title-en="1st AGM Notice">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_1st_agm_notice">1st AGM Notice</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_agm">AGM</span>
+                </div>
+                <div class="col-format">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_agm" style="display:none;">AGM</span>
+                </div>
+                <div class="col-action">
+                    <a href="documents/1st_AGM_Notice.pdf" download class="btn-download" id="btnDownload1stAgmNotice">
+                        <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. PMC Tender Notice -->
+            <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCardPmcTenderNotice" data-title-en="PMC Tender Notice">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_pmc_tender_notice">PMC Tender Notice</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_sgbm">SGBM</span>
+                </div>
+                <div class="col-format">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_sgbm" style="display:none;">SGBM</span>
+                </div>
+                <div class="col-action">
+                    <a href="documents/PMC_Tender_Notice.pdf" download class="btn-download" id="btnDownloadPmcTenderNotice">
+                        <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Society Registration Certificate -->
             <div class="doc-card doc-table-row category-resources" data-category="resources" id="docCardRegCert" data-title-en="Society Registration Certificate">
                 <div class="col-title">
                     <h3 class="doc-title" data-i18n="doc_reg_cert">Society Registration Certificate</h3>
@@ -628,15 +691,20 @@
                     <h3 class="column-title"><i class="fas fa-calendar-alt"></i> <span data-i18n="filter_agm">AGM</span></h3>
                     
                     <!-- AGM Item 1 -->
-                    <div class="meeting-card doc-card missing">
+                    <div class="meeting-card doc-card">
                         <h4 class="meeting-card-title" data-i18n="m_1_title">1st AGM (Annual General Meeting)</h4>
                         <div class="meeting-card-meta">
                             <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_1_date">17 August 2025</span></span>
-                            <span class="doc-status-tag" data-i18n="status_not_available">Not Uploaded</span>
+                            <span class="doc-category-tag" style="display:none;"></span>
                         </div>
                         <p class="meeting-card-desc" data-i18n="m_1_desc">Review of annual audits and formation of the redevelopment sub-committee.</p>
-                        <div class="meeting-card-links">
-                            <span class="no-doc-link" data-i18n="status_not_available">Not Uploaded</span>
+                        <div class="meeting-card-links" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <a href="documents/1st_AGM_Notice.pdf" download class="meeting-doc-btn btn-download">
+                                <i class="fas fa-download"></i> <span data-i18n="btn_notice">Notice</span>
+                            </a>
+                            <a href="documents/1st_AGM_Minutes.pdf" download class="meeting-doc-btn btn-download">
+                                <i class="fas fa-download"></i> <span data-i18n="btn_minutes">Minutes</span>
+                            </a>
                         </div>
                     </div>
                     
@@ -660,16 +728,16 @@
                 <div class="meeting-column">
                     <h3 class="column-title"><i class="fas fa-users"></i> <span data-i18n="filter_sgbm">SGBM</span></h3>
                     
-                    <!-- SGBM Item 3: Next SGBM (Future) -->
+                    <!-- SGBM Item 3 -->
                     <div class="meeting-card">
                         <h4 class="meeting-card-title" data-i18n="m_2_title">1st SGBM (Special General Body Meeting)</h4>
                         <div class="meeting-card-meta">
                             <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_2_date">2 August 2026</span></span>
-                            <span class="meta-status scheduled"><i class="far fa-clock"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_scheduled">Scheduled</span></span>
+                            <span class="meta-status completed"><i class="fas fa-check-circle"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_completed">Completed</span></span>
                         </div>
                         <p class="meeting-card-desc" data-i18n="m_2_desc">To be updated</p>
                         <div class="meeting-card-links">
-                            <span class="no-doc-link" data-i18n="val_to_be_updated">To Be Updated</span>
+                            <span class="no-doc-link" data-i18n="status_not_available">Not Uploaded</span>
                         </div>
                     </div>
                 </div>
