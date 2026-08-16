@@ -267,7 +267,29 @@
                 <div class="col-action" data-i18n="table_col_action">Action</div>
             </div>
 
-            <!-- 1. AGM Notice & Annual Report -->
+            <!-- 1. 1st SGBM Minutes of Meeting -->
+            <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCard1stSgbmMinutes" data-title-en="1st SGBM Minutes of Meeting">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_1st_sgbm_minutes">1st SGBM Minutes of Meeting</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_sgbm">SGBM</span>
+                </div>
+                <div class="col-format">
+                    <span class="doc-type"><i class="fas fa-file-pdf"></i> <span data-i18n="badge_pdf">PDF File</span></span>
+                </div>
+                <div class="col-status">
+                    <!-- Hidden tag for script.js to find and insert status tag next to it -->
+                    <span class="doc-category-tag" data-i18n="filter_sgbm" style="display:none;">SGBM</span>
+                </div>
+                <div class="col-action">
+                    <a href="documents/Ashiana Society SGBM MoM.pdf" download class="btn-download" id="btnDownload1stSgbmMinutes">
+                        <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. AGM Notice & Annual Report -->
             <div class="doc-card doc-table-row category-agm" data-category="agm" id="docCardAgmReportNotice" data-title-en="2nd AGM Notice & Annual Report">
                 <div class="col-title">
                     <h3 class="doc-title" data-i18n="doc_agm_notice">2nd AGM Notice & Annual Report</h3>
@@ -730,15 +752,18 @@
                     <h3 class="column-title"><i class="fas fa-users"></i> <span data-i18n="filter_sgbm">SGBM</span></h3>
                     
                     <!-- SGBM Item 3 -->
-                    <div class="meeting-card">
+                    <div class="meeting-card doc-card">
                         <h4 class="meeting-card-title" data-i18n="m_2_title">1st SGBM (Special General Body Meeting)</h4>
                         <div class="meeting-card-meta">
                             <span class="meta-date"><i class="far fa-calendar-alt"></i> <strong data-i18n="history_date">Date: </strong><span data-i18n="m_2_date">2 August 2026</span></span>
                             <span class="meta-status completed"><i class="fas fa-check-circle"></i> <strong data-i18n="history_status">Status: </strong><span data-i18n="m_status_completed">Completed</span></span>
+                            <span class="doc-category-tag" style="display:none;"></span>
                         </div>
-                        <p class="meeting-card-desc" data-i18n="m_2_desc">To be updated</p>
+                        <p class="meeting-card-desc" data-i18n="m_2_desc">Unanimously approved in-principle redevelopment plan and formed an independent Redevelopment Committee to assist the Managing Committee.</p>
                         <div class="meeting-card-links">
-                            <span class="no-doc-link" data-i18n="status_not_available">Not Uploaded</span>
+                            <a href="documents/Ashiana Society SGBM MoM.pdf" download class="meeting-doc-btn btn-download">
+                                <i class="fas fa-download"></i> <span data-i18n="btn_minutes">Minutes</span>
+                            </a>
                         </div>
                     </div>
                 </div>
