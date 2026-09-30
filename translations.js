@@ -25,7 +25,7 @@ window.portalTranslations = {
     val_nmmc_cidco: "NMMC / CIDCO",
     val_not_appointed: "Not Appointed",
     val_to_be_updated: "To Be Updated",
-    val_pmc_status_val: "Advt Out on 05/08/2026",
+    val_pmc_status_val: "Technical evaluation completed for received PMCs",
     stat_next_sgbm_val: "To Be Updated",
     val_airoli: "Airoli, Sector 5",
     
@@ -223,7 +223,7 @@ window.portalTranslations = {
     val_nmmc_cidco: "एनएमएमसी / सिडको",
     val_not_appointed: "नियुक्त नहीं",
     val_to_be_updated: "अपडेट किया जाएगा",
-    val_pmc_status_val: "विज्ञापन जारी (05/08/2026)",
+    val_pmc_status_val: "प्राप्त पीएमसी के लिए तकनीकी मूल्यांकन पूरा हुआ",
     stat_next_sgbm_val: "अपडेट किया जाएगा",
     val_airoli: "ऐरोली, सेक्टर 5",
     
@@ -421,7 +421,7 @@ window.portalTranslations = {
     val_nmmc_cidco: "एनएमएमसी / सिडको",
     val_not_appointed: "नियुक्त नाही",
     val_to_be_updated: "अपडेट केले जाईल",
-    val_pmc_status_val: "जाहिरात प्रसिद्ध (०५/०८/२०२६)",
+    val_pmc_status_val: "प्राप्त पीएमसीसाठी तांत्रिक मूल्यांकन पूर्ण झाले",
     stat_next_sgbm_val: "अद्ययावत केली जाईल",
     val_airoli: "ऐरोली, सेक्टर ५",
     
