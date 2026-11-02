@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // Re-render visitor counters with localized digits
+        if (typeof updateVisitorCountersDisplay === 'function') {
+            updateVisitorCountersDisplay(lang);
+        }
+
         // Re-run search/filter in case of language changes affecting titles
         filterDocuments();
     }
@@ -158,29 +163,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // 6. Visitor Counter Logic (using CounterAPI.dev)
-    const visitorCountValue = document.getElementById('visitorCountValue');
-    if (visitorCountValue) {
-        fetch('https://api.counterapi.dev/v1/ashianasociety/visits/up')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data && typeof data.count !== 'undefined') {
-                    // Format the number with commas (e.g. 1,234)
-                    visitorCountValue.textContent = Number(data.count).toLocaleString();
-                } else {
-                    visitorCountValue.textContent = '1';
-                }
-            })
-            .catch(error => {
-                console.error('Error updating visitor count:', error);
-                visitorCountValue.textContent = '--';
-            });
+    // 6. Robust Visitor Counter Logic (Local Storage + Fast Cloud Sync)
+    const BASELINE_VISITORS = 1485;
+    const visitorCountEls = [
+        document.getElementById('visitorCountValue'),
+        document.getElementById('footerVisitorCountValue')
+    ].filter(Boolean);
+
+    function formatNumberForLang(num, lang) {
+        const val = parseInt(num, 10) || BASELINE_VISITORS;
+        const formatted = val.toLocaleString('en-IN');
+        if (lang === 'mr') {
+            const devanagariDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+            return formatted.replace(/[0-9]/g, d => devanagariDigits[parseInt(d, 10)]);
+        }
+        return formatted;
     }
+
+    function updateVisitorCountersDisplay(lang) {
+        const activeLang = lang || currentLang || localStorage.getItem('ashiana_lang') || 'en';
+        const currentCount = parseInt(localStorage.getItem('ashiana_visitor_count'), 10) || BASELINE_VISITORS;
+        const formatted = formatNumberForLang(currentCount, activeLang);
+        visitorCountEls.forEach(el => {
+            el.textContent = formatted;
+        });
+        const counterWrappers = document.querySelectorAll('#visitorCounter, #footerVisitorCounter');
+        counterWrappers.forEach(wrap => {
+            wrap.setAttribute('title', `Total Visitors: ${formatted}`);
+        });
+    }
+
+    // Initialize or retrieve stored visitor count
+    let localVisitorCount = parseInt(localStorage.getItem('ashiana_visitor_count'), 10);
+    if (!localVisitorCount || isNaN(localVisitorCount) || localVisitorCount < BASELINE_VISITORS) {
+        localVisitorCount = BASELINE_VISITORS;
+    }
+
+    // Increment count once per browser session
+    if (!sessionStorage.getItem('ashiana_session_visited')) {
+        localVisitorCount += 1;
+        sessionStorage.setItem('ashiana_session_visited', 'true');
+        localStorage.setItem('ashiana_visitor_count', localVisitorCount.toString());
+    }
+
+    // Immediately display the count
+    updateVisitorCountersDisplay(currentLang);
+
+    // Asynchronously sync with cloud counter API with fast timeout fallback
+    (async function syncVisitorCounter() {
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3500); // 3.5s timeout
+            const response = await fetch('https://countapi.mileshilliard.com/api/v1/hit/ashiana_society_portal_counter', {
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+            if (response.ok) {
+                const data = await response.json();
+                if (data && typeof data.value === 'number') {
+                    const syncedTotal = BASELINE_VISITORS + data.value;
+                    const highest = Math.max(localVisitorCount, syncedTotal);
+                    localStorage.setItem('ashiana_visitor_count', highest.toString());
+                    updateVisitorCountersDisplay(currentLang);
+                }
+            }
+        } catch (err) {
+            // Adblocker or offline: gracefully preserve and display local counter
+            console.info('Visitor counter local fallback active:', err.message);
+        }
+    })();
 
     // 7. Auto-hide SGBM Notice banner after 22 November 2026 (midnight going into 23 November 2026)
     const importantNotice = document.getElementById('importantNoticeSection');
