@@ -341,12 +341,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Hindi
             if (window.portalTranslations.hi) {
-                window.portalTranslations.hi.stat_last_agm_val = "14 जून 2026";
+                window.portalTranslations.hi.stat_last_agm_val = "14 Jun 2026";
                 window.portalTranslations.hi.stat_next_agm_val = "अपडेट किया जाएगा";
             }
             // Marathi
             if (window.portalTranslations.mr) {
-                window.portalTranslations.mr.stat_last_agm_val = "१४ जून २०२६";
+                window.portalTranslations.mr.stat_last_agm_val = "14 Jun 2026";
                 window.portalTranslations.mr.stat_next_agm_val = "अद्ययावत केली जाईल";
             }
         }
@@ -364,13 +364,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // Hindi
             if (window.portalTranslations.hi) {
-                window.portalTranslations.hi.stat_last_sgbm_val = "22 नवंबर 2026";
+                window.portalTranslations.hi.stat_last_sgbm_val = "22 Nov 2026";
                 window.portalTranslations.hi.stat_next_sgbm_val = "अपडेट किया जाएगा";
                 window.portalTranslations.hi.stat_sgbm_count_val = "2";
             }
             // Marathi
             if (window.portalTranslations.mr) {
-                window.portalTranslations.mr.stat_last_sgbm_val = "२२ नोव्हेंबर २०२६";
+                window.portalTranslations.mr.stat_last_sgbm_val = "22 Nov 2026";
                 window.portalTranslations.mr.stat_next_sgbm_val = "अद्ययावत केली जाईल";
                 window.portalTranslations.mr.stat_sgbm_count_val = "२";
             }
