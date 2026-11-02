@@ -182,10 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // 7. Auto-hide Tomorrow's AGM Notice banner after 14 June 2026 (midnight going into 15 June 2026)
+    // 7. Auto-hide SGBM Notice banner after 22 November 2026 (midnight going into 23 November 2026)
     const importantNotice = document.getElementById('importantNoticeSection');
     if (importantNotice) {
-        const expiryDate = new Date('2026-06-15T00:00:00+05:30'); // Midnight of June 14, 2026 in local time (+05:30)
+        const expiryDate = new Date('2026-11-23T00:00:00+05:30'); // Midnight of November 22, 2026 in local time (+05:30)
         const currentDate = new Date();
         if (currentDate >= expiryDate) {
             importantNotice.style.display = 'none';
@@ -297,6 +297,31 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.portalTranslations.mr) {
                 window.portalTranslations.mr.stat_last_agm_val = "१४ जून २०२६";
                 window.portalTranslations.mr.stat_next_agm_val = "अद्ययावत केली जाईल";
+            }
+        }
+    }
+
+    // Update SGBM dates dynamically based on current date
+    const sgbmCutoffDate = new Date('2026-11-23T00:00:00+05:30'); // Midnight of Nov 22, 2026 in local time (+05:30)
+    if (currentDate >= sgbmCutoffDate) {
+        if (window.portalTranslations) {
+            // English
+            if (window.portalTranslations.en) {
+                window.portalTranslations.en.stat_last_sgbm_val = "22 November 2026";
+                window.portalTranslations.en.stat_next_sgbm_val = "To Be Updated";
+                window.portalTranslations.en.stat_sgbm_count_val = "2";
+            }
+            // Hindi
+            if (window.portalTranslations.hi) {
+                window.portalTranslations.hi.stat_last_sgbm_val = "22 नवंबर 2026";
+                window.portalTranslations.hi.stat_next_sgbm_val = "अपडेट किया जाएगा";
+                window.portalTranslations.hi.stat_sgbm_count_val = "2";
+            }
+            // Marathi
+            if (window.portalTranslations.mr) {
+                window.portalTranslations.mr.stat_last_sgbm_val = "२२ नोव्हेंबर २०२६";
+                window.portalTranslations.mr.stat_next_sgbm_val = "अद्ययावत केली जाईल";
+                window.portalTranslations.mr.stat_sgbm_count_val = "२";
             }
         }
     }
