@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.portalTranslations) {
             // English
             if (window.portalTranslations.en) {
-                window.portalTranslations.en.stat_last_agm_val = "14 June 2026";
+                window.portalTranslations.en.stat_last_agm_val = "14 Jun 2026";
                 window.portalTranslations.en.stat_next_agm_val = "To Be Updated";
             }
             // Hindi
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.portalTranslations) {
             // English
             if (window.portalTranslations.en) {
-                window.portalTranslations.en.stat_last_sgbm_val = "22 November 2026";
+                window.portalTranslations.en.stat_last_sgbm_val = "22 Nov 2026";
                 window.portalTranslations.en.stat_next_sgbm_val = "To Be Updated";
                 window.portalTranslations.en.stat_sgbm_count_val = "2";
             }
