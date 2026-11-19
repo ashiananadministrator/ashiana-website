@@ -377,6 +377,126 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 9. PMC Evaluation Chart Interactivity
+    const tabBtnVisual = document.getElementById('tabBtnVisual');
+    const tabBtnTable = document.getElementById('tabBtnTable');
+    const visualView = document.getElementById('visualView');
+    const tableView = document.getElementById('tableView');
+
+    if (tabBtnVisual && tabBtnTable && visualView && tableView) {
+        tabBtnVisual.addEventListener('click', () => {
+            tabBtnVisual.classList.add('active');
+            tabBtnTable.classList.remove('active');
+            visualView.style.display = 'block';
+            tableView.style.display = 'none';
+        });
+
+        tabBtnTable.addEventListener('click', () => {
+            tabBtnTable.classList.add('active');
+            tabBtnVisual.classList.remove('active');
+            visualView.style.display = 'none';
+            tableView.style.display = 'block';
+        });
+    }
+
+    // Print button
+    const btnPrintPmcChart = document.getElementById('btnPrintPmcChart');
+    if (btnPrintPmcChart) {
+        btnPrintPmcChart.addEventListener('click', () => {
+            window.print();
+        });
+    }
+
+    // Lightbox Modal Functionality
+    const lightboxModal = document.getElementById('pmcLightboxModal');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const btnChartFullscreen = document.getElementById('btnChartFullscreen');
+    const pmcChartImage = document.getElementById('pmcChartImage');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxZoomIn = document.getElementById('lightboxZoomIn');
+    const lightboxZoomOut = document.getElementById('lightboxZoomOut');
+    const lightboxZoomReset = document.getElementById('lightboxZoomReset');
+    const lightboxBody = document.getElementById('lightboxBody');
+
+    let currentZoom = 1;
+
+    function openLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.add('active');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        currentZoom = 1;
+        updateZoom();
+    }
+
+    function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove('active');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        currentZoom = 1;
+        updateZoom();
+    }
+
+    function updateZoom() {
+        if (lightboxImg) {
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+        }
+    }
+
+    if (btnChartFullscreen) btnChartFullscreen.addEventListener('click', openLightbox);
+    if (pmcChartImage) pmcChartImage.addEventListener('click', openLightbox);
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLightbox);
+
+    if (lightboxZoomIn) {
+        lightboxZoomIn.addEventListener('click', () => {
+            if (currentZoom < 3) {
+                currentZoom += 0.25;
+                updateZoom();
+            }
+        });
+    }
+
+    if (lightboxZoomOut) {
+        lightboxZoomOut.addEventListener('click', () => {
+            if (currentZoom > 0.5) {
+                currentZoom -= 0.25;
+                updateZoom();
+            }
+        });
+    }
+
+    if (lightboxZoomReset) {
+        lightboxZoomReset.addEventListener('click', () => {
+            currentZoom = 1;
+            updateZoom();
+        });
+    }
+
+    // Escape key closes modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // Mouse wheel zoom inside lightbox body
+    if (lightboxBody) {
+        lightboxBody.addEventListener('wheel', (e) => {
+            if (lightboxModal && lightboxModal.classList.contains('active')) {
+                e.preventDefault();
+                if (e.deltaY < 0 && currentZoom < 3) {
+                    currentZoom += 0.15;
+                } else if (e.deltaY > 0 && currentZoom > 0.5) {
+                    currentZoom -= 0.15;
+                }
+                updateZoom();
+            }
+        }, { passive: false });
+    }
+
     // Initialize Active Language
     applyLanguage(currentLang);
 });

@@ -50,6 +50,7 @@
             <nav id="mainNav">
                 <ul>
                     <li><a href="#heroSection" id="navHome" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#pmcEvaluationSection" id="navPmcChart" data-i18n="nav_pmc_chart">PMC Evaluation</a></li>
                     <li><a href="#portalSection" id="navPortal" data-i18n="nav_portal">Document Portal</a></li>
                     <li><a href="#aboutRedev" id="navAbout" data-i18n="nav_about">Redevelopment Info</a></li>
                     <li><a href="#committeeSection" id="navCommittee" data-i18n="nav_committee">Committee</a></li>
@@ -80,9 +81,14 @@
                     Special General Body Meeting (SGBM) notice for the selection and appointment of Project Management Consultant (PMC) is now available for download. SGBM is scheduled on Sunday, 22 Nov 2026 from 10:00 AM to 3:00 PM at Shri Siddhivinayak Mandir Hall, First Floor. All members are requested to attend.
                 </span>
             </div>
-            <a href="documents/2nd_SGBM_Notice.pdf" download class="btn-notice-download" id="btnImportantNoticeDownload">
-                <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
-            </a>
+            <div class="notice-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+                <a href="#pmcEvaluationSection" class="btn-notice-chart" id="btnImportantNoticeChart">
+                    <i class="fas fa-chart-line"></i> <span data-i18n="btn_view_pmc_chart">View PMC Chart</span>
+                </a>
+                <a href="documents/2nd_SGBM_Notice.pdf" download class="btn-notice-download" id="btnImportantNoticeDownload">
+                    <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -146,7 +152,7 @@
                     </div>
                     <div class="hero-stat-row" style="border: none;">
                         <span class="hero-stat-label" data-i18n="stat_last_updated">Website Last Updated</span>
-                        <span class="hero-stat-val" data-i18n="stat_last_updated_val">02 Nov 2026</span>
+                        <span class="hero-stat-val" data-i18n="stat_last_updated_val">19 Nov 2026</span>
                     </div>
                 </div>
             </div>
@@ -236,6 +242,304 @@
         </div>
     </section>
 
+    <!-- Shortlisted PMC Comparative Evaluation Chart Section -->
+    <section class="pmc-evaluation-section" id="pmcEvaluationSection">
+        <div class="container">
+            <div class="section-header">
+                <span class="pmc-badge"><i class="fas fa-clipboard-check"></i> <span data-i18n="pmc_badge">PMC SELECTION 2026 • 2ND SGBM</span></span>
+                <h2 data-i18n="pmc_chart_title">Shortlisted PMC Comparative Evaluation Chart</h2>
+                <p data-i18n="pmc_chart_desc">Official comparative evaluation of the three shortlisted Project Management Consultants (TriArch D.S, Rajesh RC, and Atul Patel) prepared by the Scrutiny and Site Visit Committees for review prior to the Special General Body Meeting on 22 Nov 2026.</p>
+            </div>
+
+            <!-- Quick Metrics Grid -->
+            <div class="pmc-metrics-grid">
+                <div class="pmc-metric-card">
+                    <div class="pmc-metric-icon"><i class="fas fa-building"></i></div>
+                    <div class="pmc-metric-info">
+                        <span class="pmc-metric-label" data-i18n="metric_shortlisted_firms">3 Shortlisted Firms</span>
+                        <span class="pmc-metric-val" data-i18n="metric_shortlisted_firms_val">TriArch • Rajesh RC • Atul Patel</span>
+                    </div>
+                </div>
+                <div class="pmc-metric-card">
+                    <div class="pmc-metric-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="pmc-metric-info">
+                        <span class="pmc-metric-label" data-i18n="metric_scrutiny_period">Scrutiny Period</span>
+                        <span class="pmc-metric-val" data-i18n="metric_scrutiny_period_val">25 Aug – 10 Oct 2026</span>
+                    </div>
+                </div>
+                <div class="pmc-metric-card">
+                    <div class="pmc-metric-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="pmc-metric-info">
+                        <span class="pmc-metric-label" data-i18n="metric_sections_count">Evaluation Sections</span>
+                        <span class="pmc-metric-val" data-i18n="metric_sections_count_val">Credentials • Feasibility • Feedback</span>
+                    </div>
+                </div>
+                <div class="pmc-metric-card">
+                    <div class="pmc-metric-icon"><i class="fas fa-vote-yea"></i></div>
+                    <div class="pmc-metric-info">
+                        <span class="pmc-metric-label" data-i18n="metric_voting_sgbm">Selection SGBM</span>
+                        <span class="pmc-metric-val" data-i18n="metric_voting_sgbm_val">Sunday, 22 Nov 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Controls Toolbar -->
+            <div class="pmc-toolbar">
+                <div class="pmc-view-tabs">
+                    <button type="button" class="pmc-tab-btn active" id="tabBtnVisual" data-target="visualView">
+                        <i class="fas fa-image"></i> <span data-i18n="tab_visual_chart">Official Scrutiny Chart</span>
+                    </button>
+                    <button type="button" class="pmc-tab-btn" id="tabBtnTable" data-target="tableView">
+                        <i class="fas fa-table"></i> <span data-i18n="tab_data_table">Interactive Comparison Matrix</span>
+                    </button>
+                </div>
+                <div class="pmc-toolbar-actions">
+                    <button type="button" class="pmc-action-btn" id="btnChartFullscreen" title="View Fullscreen">
+                        <i class="fas fa-expand"></i> <span data-i18n="btn_fullscreen">Fullscreen View</span>
+                    </button>
+                    <a href="documents/PMC_Evaluation_Comparative_Chart.jpg" download="Ashiana_CHS_PMC_Evaluation_Chart.jpg" class="pmc-action-btn" id="btnDownloadChart" title="Download High-Resolution Chart">
+                        <i class="fas fa-download"></i> <span data-i18n="btn_download_chart">Download Chart (HD)</span>
+                    </a>
+                    <button type="button" class="pmc-action-btn" id="btnPrintPmcChart" title="Print Chart">
+                        <i class="fas fa-print"></i> <span data-i18n="btn_print_chart">Print</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- View 1: Visual Image Chart (Default) -->
+            <div class="pmc-view-panel" id="visualView">
+                <div class="pmc-image-wrapper">
+                    <div class="pmc-zoom-hint">
+                        <i class="fas fa-search-plus"></i> <span data-i18n="zoom_hint">Click or tap chart to open full-screen zoomable view</span>
+                    </div>
+                    <div class="pmc-image-scroll-box" id="pmcImageScrollBox">
+                        <img 
+                            src="documents/PMC_Evaluation_Comparative_Chart.jpg" 
+                            alt="Ashiana CHS - Shortlisted PMC Comparative Evaluation Chart (TriArch D.S, Rajesh RC, Atul Patel)" 
+                            class="pmc-chart-image" 
+                            id="pmcChartImage" 
+                            loading="lazy" 
+                            title="Click to open Fullscreen Zoom View"
+                        />
+                    </div>
+                    <div class="pmc-image-caption">
+                        <div class="caption-left">
+                            <i class="fas fa-shield-alt"></i> <strong>Certified Scrutiny Record:</strong> Ashiana CHS Redevelopment PMC Selection Evaluation
+                        </div>
+                        <div class="caption-right">
+                            <span><i class="fas fa-file-image"></i> High-Resolution Matrix</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View 2: Interactive Structured Table -->
+            <div class="pmc-view-panel" id="tableView" style="display: none;">
+                <div class="pmc-table-wrapper">
+                    <table class="pmc-eval-table">
+                        <thead>
+                            <tr>
+                                <th class="col-param" data-i18n="col_eval_params">Evaluation Parameters</th>
+                                <th>
+                                    <span class="firm-header-name" data-i18n="firm_triarch">TriArch D.S</span>
+                                    <span class="firm-header-sub" data-i18n="firm_triarch_sub">Architecture</span>
+                                </th>
+                                <th>
+                                    <span class="firm-header-name" data-i18n="firm_rajesh">Rajesh RC</span>
+                                    <span class="firm-header-sub" data-i18n="firm_rajesh_sub">Architect</span>
+                                </th>
+                                <th>
+                                    <span class="firm-header-name" data-i18n="firm_atul">Atul Patel</span>
+                                    <span class="firm-header-sub" data-i18n="firm_atul_sub">Architect</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- SECTION I: FIRM CREDENTIALS & EXPERIENCE -->
+                            <tr class="section-row-header sec-1-header">
+                                <td colspan="4" data-i18n="sec1_title">Section - I : FIRM CREDENTIALS & EXPERIENCE</td>
+                            </tr>
+                            <tr class="section-info-row sec-1-info">
+                                <td colspan="4">
+                                    <div data-i18n="sec1_team"><strong>Scrutiny Team Members:-</strong> Mr. Narayan Borude, Mr. Sanjay Dhumal, Mr. Haribhau Dhanurkar, Mr. R.A. Shukla, Mr. Rajesh Samant, Mr. Laxmikant Khole, Ms. Anita Selvarajan</div>
+                                    <div data-i18n="sec1_date"><strong>Date of Scrutiny:-</strong> 25 August 2026 to 8 September 2026</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_total_exp">Total Experience</td>
+                                <td><strong>34 years</strong></td>
+                                <td><strong>20 years</strong></td>
+                                <td><strong>30 years</strong></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_curr_proj">Current Projects - Appointment as PMC</td>
+                                <td><strong>23</strong></td>
+                                <td><strong>13</strong></td>
+                                <td><strong>52</strong></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_cc_oc">CC+OC</td>
+                                <td><strong>6</strong></td>
+                                <td><strong>5</strong></td>
+                                <td><strong>30</strong></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_assigned_team">Assigned Core Team</td>
+                                <td><strong>24</strong></td>
+                                <td><strong>17</strong></td>
+                                <td><strong>93</strong></td>
+                            </tr>
+
+                            <!-- SECTION II: FEASIBILITY & COMMERCIAL -->
+                            <tr class="section-row-header sec-2-header">
+                                <td colspan="4" data-i18n="sec2_title">Section - II: FEASIBILITY & COMMERCIAL</td>
+                            </tr>
+                            <tr class="section-info-row sec-2-info">
+                                <td colspan="4">
+                                    <div data-i18n="sec2_team"><strong>Scrutiny Team Members:-</strong> Mr. Narayan Borude, Mr. Sanjay Dhumal, Mr. Haribhau Dhanurkar, Mr. Kishore Pendharkar, Mr. R.A. Shukla, Mr. Rajesh Samant, Mr. Laxmikant Khole, Ms. Anita Selvarajan</div>
+                                    <div data-i18n="sec2_date"><strong>Date of Scrutiny:-</strong> 22 September 2026 to 2 October 2026</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_carpet_area">RERA Carpet Area Offered</td>
+                                <td><strong>1107 sq ft</strong></td>
+                                <td><strong>1100 sq ft</strong></td>
+                                <td><strong>1101 sq ft</strong></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_monthly_rent">Monthly Rent (₹)</td>
+                                <td>₹50,000</td>
+                                <td>₹50,000</td>
+                                <td>₹50,000</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_escalation">Escalation (₹)</td>
+                                <td>10%</td>
+                                <td>10%</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_ref_deposit">Refundable Deposit (₹)</td>
+                                <td>₹1,50,000</td>
+                                <td>₹1,50,000</td>
+                                <td>₹1,50,000</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_corpus">Corpus Fund (₹)</td>
+                                <td>₹3,00,000</td>
+                                <td>₹3,00,000</td>
+                                <td>₹3,00,000</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_shifting">Shifting Charges (₹)</td>
+                                <td>₹20,000</td>
+                                <td>₹20,000</td>
+                                <td>₹20,000</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_brokerage">Agent Brokerage (₹)</td>
+                                <td>₹50,000</td>
+                                <td>₹50,000</td>
+                                <td>₹50,000</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_parking">Parking Slot</td>
+                                <td><strong>2</strong></td>
+                                <td><strong>2</strong></td>
+                                <td><strong>1</strong></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_total_budget">Total Budget (In Crores)</td>
+                                <td><strong style="color: var(--accent);">₹135.12 Cr</strong></td>
+                                <td><strong style="color: var(--accent);">₹176.21 Cr</strong></td>
+                                <td><strong style="color: var(--accent);">₹150.04 Cr</strong></td>
+                            </tr>
+
+                            <!-- SECTION III: SITE VISIT & FEEDBACK -->
+                            <tr class="section-row-header sec-3-header">
+                                <td colspan="4" data-i18n="sec3_title">Section - III : SITE VISIT & FEEDBACK</td>
+                            </tr>
+                            <tr class="section-info-row sec-3-info">
+                                <td colspan="4">
+                                    <div data-i18n="sec3_team"><strong>Site Visit Team Members:-</strong> Mr. Narayan Borude, Mr. Sanjay Dhumal, Mr. Haribhau Dhanurkar, Mr. Kishore Pendharkar, Mr. Dinesh Darvesh, Mr. Laxmikant Khole, Ms. Anita Selvarajan</div>
+                                    <div data-i18n="sec3_date"><strong>Date of Site Visit:-</strong> 9 October 2026 & 10 October 2026</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_office_staff">Corporate Office & Staff</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_plot_understanding">Understanding Of Plot</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_challenges">Identification of Key Challenges</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_query_response">Interaction & Response to our queries</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="badge-eval-sat" data-i18n="eval_satisfactory">Satisfactory</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_transparency">Transparency During Redevelopment</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="val-empty">—</span></td>
+                                <td><span class="badge-eval-sat" data-i18n="eval_satisfactory">Satisfactory</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_dev_coord">Developer Coordination Capability</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="val-empty">—</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="param_resident_satisfaction">Resident Satisfaction in Ongoing Projects</td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                                <td><span class="val-empty">—</span></td>
+                                <td><span class="badge-eval-good" data-i18n="eval_good">Good</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Fullscreen Chart Inspection -->
+    <div class="pmc-lightbox-modal" id="pmcLightboxModal" aria-hidden="true" role="dialog">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-container">
+            <div class="lightbox-header">
+                <div class="lightbox-title">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Ashiana CHS - PMC Comparative Evaluation Chart</span>
+                </div>
+                <div class="lightbox-controls">
+                    <button type="button" class="lightbox-btn" id="lightboxZoomIn" title="Zoom In"><i class="fas fa-search-plus"></i></button>
+                    <button type="button" class="lightbox-btn" id="lightboxZoomOut" title="Zoom Out"><i class="fas fa-search-minus"></i></button>
+                    <button type="button" class="lightbox-btn" id="lightboxZoomReset" title="Reset Zoom"><i class="fas fa-undo"></i></button>
+                    <a href="documents/PMC_Evaluation_Comparative_Chart.jpg" download="Ashiana_CHS_PMC_Evaluation_Chart.jpg" class="lightbox-btn" title="Download High-Res Chart"><i class="fas fa-download"></i></a>
+                    <button type="button" class="lightbox-btn close-btn" id="lightboxClose" title="Close"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="lightbox-body" id="lightboxBody">
+                <img src="documents/PMC_Evaluation_Comparative_Chart.jpg" alt="Ashiana CHS PMC Evaluation Chart Fullscreen" id="lightboxImg" class="lightbox-img" />
+            </div>
+            <div class="lightbox-footer">
+                <span data-i18n="lightbox_hint">Use mouse wheel or zoom buttons to zoom • Drag to pan • Press ESC to close</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Document Portal Section -->
     <main class="container" id="portalSection">
         <div class="section-header">
@@ -273,6 +577,30 @@
             </div>
 
             <!-- 1. 2nd SGBM Notice (PMC Selection) -->
+            <!-- PMC Comparative Evaluation Chart -->
+            <div class="doc-card doc-table-row category-annexures" data-category="annexures" id="docCardPmcEvalChart" data-title-en="PMC Comparative Evaluation Chart (3 Shortlisted PMCs)">
+                <div class="col-title">
+                    <h3 class="doc-title" data-i18n="doc_pmc_eval_chart">PMC Comparative Evaluation Chart (3 Shortlisted PMCs)</h3>
+                </div>
+                <div class="col-category">
+                    <span class="doc-display-category" data-i18n="filter_annexures">Annexures</span>
+                </div>
+                <div class="col-date">
+                    <i class="far fa-calendar-alt"></i> <span data-i18n="doc_date_pmc_eval">10 Oct 2026</span>
+                </div>
+                <div class="col-format">
+                    <span class="doc-type"><i class="fas fa-file-image"></i> <span data-i18n="badge_jpg">JPG Image</span></span>
+                </div>
+                <div class="col-status">
+                    <span class="doc-category-tag" data-i18n="filter_annexures" style="display:none;">Annexures</span>
+                </div>
+                <div class="col-action">
+                    <a href="documents/PMC_Evaluation_Comparative_Chart.jpg" download="Ashiana_CHS_PMC_Evaluation_Chart.jpg" class="btn-download" id="btnDownloadPmcEvalChart">
+                        <i class="fas fa-download"></i> <span data-i18n="btn_download">Download</span>
+                    </a>
+                </div>
+            </div>
+
             <div class="doc-card doc-table-row category-sgbm" data-category="sgbm" id="docCard2ndSgbmNotice" data-title-en="2nd SGBM Notice (PMC Selection)">
                 <div class="col-title">
                     <h3 class="doc-title" data-i18n="doc_2nd_sgbm_notice">2nd SGBM Notice (PMC Selection)</h3>
@@ -828,6 +1156,7 @@
                             <a href="documents/2nd_SGBM_Notice.pdf" download class="meeting-doc-btn btn-download">
                                 <i class="fas fa-download"></i> <span data-i18n="btn_notice">Notice</span>
                             </a>
+                            <a href="#pmcEvaluationSection" class="meeting-doc-btn btn-download" style="background-color: var(--primary);"><i class="fas fa-chart-line"></i> <span data-i18n="btn_eval_chart">Evaluation Chart</span></a>
                         </div>
                     </div>
                 </div>
@@ -912,6 +1241,7 @@
                     <h4 class="footer-title" data-i18n="footer_quick_links">Quick Links</h4>
                     <ul>
                         <li><a href="#heroSection" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#pmcEvaluationSection" data-i18n="nav_pmc_chart">PMC Evaluation</a></li>
                         <li><a href="#portalSection" data-i18n="nav_portal">Document Portal</a></li>
                         <li><a href="#aboutRedev" data-i18n="nav_about">Redevelopment Info</a></li>
                         <li><a href="#committeeSection" data-i18n="nav_committee">Committee</a></li>

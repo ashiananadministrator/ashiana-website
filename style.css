@@ -2424,3 +2424,619 @@ footer {
 .stat-link:hover {
     color: #FFFFFF;
 }
+
+
+/* ========================================================
+   PMC Comparative Evaluation Chart Section Styling
+   ======================================================== */
+.btn-notice-chart {
+    background-color: var(--accent);
+    color: #FFFFFF !important;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.btn-notice-chart:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(180, 83, 9, 0.25);
+}
+
+.pmc-evaluation-section {
+    background-color: #FFFFFF;
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.pmc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #FEF3C7;
+    color: var(--accent);
+    border: 1px solid #FCD34D;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.pmc-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.pmc-metric-card {
+    background: #FFFDF9;
+    border: 1px solid #FDE68A;
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.pmc-metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.pmc-metric-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #FEF3C7;
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.pmc-metric-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.pmc-metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.pmc-metric-val {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.3;
+    margin-top: 2px;
+}
+
+/* Toolbar */
+.pmc-toolbar {
+    max-width: 1100px;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: #F8FAFC;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.pmc-view-tabs {
+    display: inline-flex;
+    background: #E2E8F0;
+    padding: 3px;
+    border-radius: 8px;
+    gap: 2px;
+}
+
+.pmc-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+
+.pmc-tab-btn:hover {
+    color: var(--primary);
+}
+
+.pmc-tab-btn.active {
+    background: #FFFFFF;
+    color: var(--primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pmc-toolbar-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.pmc-action-btn {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    color: var(--primary);
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.pmc-action-btn:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+    border-color: var(--primary);
+}
+
+.pmc-action-btn i {
+    color: var(--accent);
+}
+
+.pmc-action-btn:hover i {
+    color: #FFFFFF;
+}
+
+/* Image Visual Chart Container */
+.pmc-image-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-md);
+}
+
+.pmc-zoom-hint {
+    background: #FEF3C7;
+    color: #92400E;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.45rem 0.85rem;
+    border-radius: 6px;
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pmc-zoom-hint i {
+    color: var(--accent);
+}
+
+.pmc-image-scroll-box {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: #F8FAFC;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.pmc-chart-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.pmc-chart-image:hover {
+    filter: brightness(0.98);
+}
+
+.pmc-image-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 0.85rem;
+    margin-top: 0.85rem;
+    border-top: 1px dashed var(--border-color);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.caption-left {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.caption-left i {
+    color: #10B981;
+}
+
+.caption-right span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: #F1F5F9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Interactive Structured Table */
+.pmc-table-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: var(--shadow-md);
+}
+
+.pmc-eval-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 780px;
+}
+
+.pmc-eval-table th,
+.pmc-eval-table td {
+    padding: 0.65rem 1rem;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+}
+
+.pmc-eval-table th:first-child,
+.pmc-eval-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    width: 38%;
+}
+
+.pmc-eval-table th {
+    background-color: #FEEBC8;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.pmc-eval-table th.col-param {
+    background-color: #FED7D7;
+    font-size: 0.95rem;
+}
+
+.firm-header-name {
+    font-size: 1.05rem;
+    display: block;
+    color: var(--primary);
+}
+
+.firm-header-sub {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #78350F;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    display: block;
+}
+
+/* Section Separator Rows */
+.section-row-header td {
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-align: left !important;
+    padding: 0.55rem 1rem !important;
+    letter-spacing: 0.5px;
+}
+
+.section-info-row td {
+    font-size: 0.8rem;
+    text-align: left !important;
+    padding: 0.45rem 1rem !important;
+    line-height: 1.5;
+}
+
+/* Section I: Green */
+.sec-1-header td {
+    background-color: #C6F6D5 !important;
+    color: #22543D !important;
+    border-color: #9AE6B4 !important;
+}
+
+.sec-1-info td {
+    background-color: #F0FFF4 !important;
+    color: #276749 !important;
+    border-color: #C6F6D5 !important;
+}
+
+/* Section II: Blue */
+.sec-2-header td {
+    background-color: #BEE3F8 !important;
+    color: #2A4365 !important;
+    border-color: #90CDF4 !important;
+}
+
+.sec-2-info td {
+    background-color: #EBF8FF !important;
+    color: #2C5282 !important;
+    border-color: #BEE3F8 !important;
+}
+
+/* Section III: Purple */
+.sec-3-header td {
+    background-color: #E9D8FD !important;
+    color: #44337A !important;
+    border-color: #D6BCFA !important;
+}
+
+.sec-3-info td {
+    background-color: #FAF5FF !important;
+    color: #553C9A !important;
+    border-color: #E9D8FD !important;
+}
+
+/* Table Row Highlights */
+.pmc-eval-table tr:hover:not(.section-row-header):not(.section-info-row) {
+    background-color: #F8FAFC;
+}
+
+.badge-eval-good {
+    display: inline-block;
+    background-color: #DEF7EC;
+    color: #03543F;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.badge-eval-sat {
+    display: inline-block;
+    background-color: #FEF3C7;
+    color: #92400E;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.val-empty {
+    color: #94A3B8;
+    font-weight: 500;
+}
+
+/* Lightbox Modal */
+.pmc-lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.94);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pmc-lightbox-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-container {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    width: 95vw;
+    max-width: 1400px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: zoomModal 0.25s ease-out;
+}
+
+@keyframes zoomModal {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lightbox-header {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lightbox-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lightbox-title i {
+    color: var(--accent);
+}
+
+.lightbox-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lightbox-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.lightbox-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #FFFFFF;
+}
+
+.lightbox-btn.close-btn:hover {
+    background: #EF4444;
+    border-color: #EF4444;
+}
+
+.lightbox-body {
+    flex: 1;
+    overflow: auto;
+    padding: 1.5rem;
+    background-color: #0F172A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: grab;
+}
+
+.lightbox-body:active {
+    cursor: grabbing;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.lightbox-footer {
+    background-color: #1E293B;
+    color: #94A3B8;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+/* Responsive Styles for PMC Section */
+@media (max-width: 1024px) {
+    .pmc-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pmc-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    .pmc-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .pmc-view-tabs {
+        width: 100%;
+    }
+    .pmc-tab-btn {
+        flex: 1;
+        justify-content: center;
+    }
+    .pmc-toolbar-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .pmc-action-btn {
+        flex: 1;
+        justify-content: center;
+    }
+    .lightbox-container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .pmc-image-wrapper {
+        padding: 0.75rem;
+    }
+}
+
+/* Print Optimization */
+@media print {
+    header, footer, .important-notice-section, .hero, .progress-section, #portalSection, #aboutRedev, #committeeSection, #meetingHistory, #contactSection, .pmc-toolbar, .pmc-zoom-hint, .scroll-top {
+        display: none !important;
+    }
+    .pmc-evaluation-section {
+        padding: 0 !important;
+        border: none !important;
+    }
+    .pmc-chart-image {
+        max-width: 100% !important;
+        box-shadow: none !important;
+    }
+}
